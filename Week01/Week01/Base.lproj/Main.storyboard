@@ -160,6 +160,7 @@
                                 <rect key="frame" x="16" y="274" width="25" height="24"/>
                                 <connections>
                                     <action selector="buttonInfoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7sh-fY-f9o"/>
+                                    <segue destination="f5H-4r-1Cv" kind="presentation" id="ymQ-ON-dvf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -212,6 +213,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-210" y="-140"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="EMP-Ve-huw">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="f5H-4r-1Cv" customClass="WebViewController" customModule="Week01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AHV-xS-43j">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uo1-Ez-pTh">
+                                <rect key="frame" x="16" y="16" width="288" height="373"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMB-Pu-PGp">
+                                <rect key="frame" x="120" y="405" width="80" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="6zW-DC-nLu"/>
+                                    <constraint firstAttribute="height" constant="35" id="xN5-Bn-kUU"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="buttonCloseTapped:" destination="f5H-4r-1Cv" eventType="touchUpInside" id="2x3-9v-vaF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uo1-Ez-pTh" firstAttribute="leading" secondItem="AHV-xS-43j" secondAttribute="leading" constant="16" id="6dK-cx-mYj"/>
+                            <constraint firstAttribute="trailing" secondItem="uo1-Ez-pTh" secondAttribute="trailing" constant="16" id="U8X-R3-hn1"/>
+                            <constraint firstItem="GMB-Pu-PGp" firstAttribute="top" secondItem="uo1-Ez-pTh" secondAttribute="bottom" constant="16" id="XJs-d9-Fhc"/>
+                            <constraint firstItem="oqf-V4-5Sy" firstAttribute="bottom" secondItem="GMB-Pu-PGp" secondAttribute="bottom" constant="20" id="XcQ-wn-OYE"/>
+                            <constraint firstItem="GMB-Pu-PGp" firstAttribute="centerX" secondItem="AHV-xS-43j" secondAttribute="centerX" id="gct-1M-ucQ"/>
+                            <constraint firstItem="uo1-Ez-pTh" firstAttribute="top" secondItem="oqf-V4-5Sy" secondAttribute="top" constant="16" id="vpe-sn-YyV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oqf-V4-5Sy"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="uo1-Ez-pTh" id="1OJ-vy-0zy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="imG-lB-dDd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="564" y="-140"/>
         </scene>
     </scenes>
 </document>

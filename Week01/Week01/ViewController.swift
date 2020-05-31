@@ -81,6 +81,67 @@ extension ViewController {
     
     @IBAction func buttonSetColorTapped(_ sender: UIButton) {
         
+        let alert = UIAlertController(title: "Please Enter a Name", message: nil, preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.delegate = self
+            textField.returnKeyType = .done
+        }
+        let action = UIAlertAction(title: "Done", style: .default, handler: { action in
+            
+            let textField = alert.textFields![0]
+            if let colorName = textField.text, colorName.trimmingCharacters(in: .whitespacesAndNewlines) != ""  {
+                
+                self.labelColorName.text = colorName
+            }
+            else {
+                
+                if self.labelColorName.text == "Color Not Set" {
+                    self.labelColorName.text = "Please Enter a Name"
+                }
+            }
+            
+            textField.resignFirstResponder()
+            self.setColor()
+        })
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func buttonResetTapped(_ sender: UIButton) {
+        
+        reset()
+    }
+    
+}
+
+// MARK: - TextField Delegate Methods
+extension ViewController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        if let colorName = textField.text, colorName.trimmingCharacters(in: .whitespacesAndNewlines) != ""  {
+            
+            self.labelColorName.text = colorName
+        }
+        else {
+            
+            if self.labelColorName.text == "Color Not Set" {
+                self.labelColorName.text = "Please Enter a Name"
+            }
+        }
+        
+        self.setColor()
+        textField.resignFirstResponder()
+        dismiss(animated: true, completion: nil)
+        return true
+    }
+}
+
+// MARK: - Color Setting Logic
+extension ViewController {
+    
+    func setColor() {
+        
         let redOrHue = sliderRedOrHue.value.rounded()
         let greenOrSaturation = sliderGreenOrSaturation.value.rounded()
         let blueOrBrightness = sliderBlueOrBrightness.value.rounded()
@@ -98,15 +159,6 @@ extension ViewController {
             updateLabelColor(color: .black)
         }
     }
-    
-    @IBAction func buttonResetTapped(_ sender: UIButton) {
-        
-        reset()
-    }
-}
-
-// MARK: - Color Setting Logic
-extension ViewController {
     
     func initSliders() {
         
