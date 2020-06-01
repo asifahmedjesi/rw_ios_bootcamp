@@ -81,15 +81,12 @@ extension ViewController {
     
     @IBAction func buttonSetColorTapped(_ sender: UIButton) {
         
-        setColor()
-        return
-        
-        let alert = UIAlertController(title: "Please Enter a Name", message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Please enter a name", message: nil, preferredStyle: .alert)
         alert.addTextField { (textField) in
             textField.delegate = self
             textField.returnKeyType = .done
         }
-        let action = UIAlertAction(title: "Done", style: .default, handler: { action in
+        let action = UIAlertAction(title: "OK", style: .default, handler: { action in
             
             let textField = alert.textFields![0]
             if let colorName = textField.text, colorName.trimmingCharacters(in: .whitespacesAndNewlines) != ""  {
@@ -98,8 +95,8 @@ extension ViewController {
             }
             else {
                 
-                if self.labelColorName.text == "Color Not Set" {
-                    self.labelColorName.text = "Please Enter a Name"
+                if self.labelColorName.text == "Color not set" {
+                    self.labelColorName.text = "Please enter a name"
                 }
             }
             
@@ -128,8 +125,8 @@ extension ViewController : UITextFieldDelegate {
         }
         else {
             
-            if self.labelColorName.text == "Color Not Set" {
-                self.labelColorName.text = "Please Enter a Name"
+            if self.labelColorName.text == "Color not set" {
+                self.labelColorName.text = "Please enter a name"
             }
         }
         
@@ -203,7 +200,7 @@ extension ViewController {
         labelGreenOrSaturationValue.text = String(0)
         labelBlueOrBrightnessValue.text = String(0)
 
-        labelColorName.text = "Color Not Set"
+        labelColorName.text = "Color not set"
         
         view.backgroundColor = UIColor.white
         
