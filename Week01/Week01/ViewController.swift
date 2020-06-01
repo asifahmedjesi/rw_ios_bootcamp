@@ -81,6 +81,9 @@ extension ViewController {
     
     @IBAction func buttonSetColorTapped(_ sender: UIButton) {
         
+        setColor()
+        return
+        
         let alert = UIAlertController(title: "Please Enter a Name", message: nil, preferredStyle: .alert)
         alert.addTextField { (textField) in
             textField.delegate = self
@@ -152,12 +155,8 @@ extension ViewController {
         
         view.backgroundColor = color
         
-        if redOrHue == 0 && greenOrSaturation == 0 && blueOrBrightness == 0 {
-            updateLabelColor(color: .white)
-        }
-        else {
-            updateLabelColor(color: .black)
-        }
+        let labelColor = color.getContrastColor()
+        updateLabelColor(color: labelColor)
     }
     
     func initSliders() {
@@ -221,7 +220,7 @@ extension ViewController {
         labelBlueOrBrightnessValue.textColor = color
         labelColorName.textColor = color
     }
-    
+
     func getColorFromRGB(red: Float, green: Float, blue: Float) -> UIColor {
         
         let modifiedRed = CGFloat(red/maxRGBValue)
