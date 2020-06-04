@@ -13,7 +13,10 @@ This is an iOS bootcamp organized by raywenderlich.com/
 	- **State:** Dhaka
 	- **City:** Dhaka
 
-- **Programming Experience:** 12 Years
+- **Programming Experience:** 
+	- 9 years of experience in .NET platform using C#
+	- 1 year of experience in android platform using JAVA
+	- 2 years of experience in iOS platform using Swift 
 
 - **Goals:** To become one of the best iOS Software Architect in this world
 
@@ -26,6 +29,6 @@ This is an iOS bootcamp organized by raywenderlich.com/
 	- Learning new programming languages
 	- Love to study on software architecture related books, articles, blogs, etc.
 
-- **Photo:**
+- **Avatar:**
 
-![Asif Ahmed Jesi](/asif_ahmed_jesi.jpg)
+![Asif Ahmed Jesi](/images/asif_ahmed_jesi.jpg)
