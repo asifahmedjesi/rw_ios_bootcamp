@@ -17,7 +17,7 @@ class BullsEyeGame {
     private(set) var round = 0
     
     private var points = 0
-    private var quickDiff: Int {
+    var difference: Int {
         get {
             return abs(self.targetValue - self.currentValue)
         }
@@ -37,13 +37,13 @@ class BullsEyeGame {
         self.calculatePoints()
         
         var feedback: String = ""
-        if quickDiff == 0 {
+        if difference == 0 {
           feedback = "Perfect!"
         }
-        else if quickDiff < 5 {
+        else if difference < 5 {
           feedback = "You almost had it!"
         }
-        else if quickDiff < 10 {
+        else if difference < 10 {
           feedback = "Pretty good!"
         }
         else {
@@ -54,16 +54,16 @@ class BullsEyeGame {
     }
     
     private func calculatePoints() {
-        self.points = 100 - self.quickDiff
+        self.points = 100 - self.difference
         self.calculateBonusPoints()
         self.score += points        
     }
     private func calculateBonusPoints() {
-        if quickDiff == 0 {
+        if difference == 0 {
             self.points += 100
         }
-        else if quickDiff < 5 {
-            if quickDiff == 1 {
+        else if difference < 5 {
+            if difference == 1 {
                 self.points += 50
             }
         }
