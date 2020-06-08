@@ -8,26 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		352A679920D171E800D5BF05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352A679820D171E800D5BF05 /* AppDelegate.swift */; };
-		352A679B20D171E800D5BF05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352A679A20D171E800D5BF05 /* ViewController.swift */; };
 		352A67A020D171EA00D5BF05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352A679F20D171EA00D5BF05 /* Assets.xcassets */; };
 		352A67A320D171EA00D5BF05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 352A67A120D171EA00D5BF05 /* LaunchScreen.storyboard */; };
 		762F09A2248DAE3000E5FDD3 /* BullsEyeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762F09A1248DAE3000E5FDD3 /* BullsEyeGame.swift */; };
 		76896CFB248D7706008F575C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76896CFA248D7706008F575C /* Main.storyboard */; };
 		76896D00248D9EA6008F575C /* UIViewcontroller+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76896CFF248D9EA6008F575C /* UIViewcontroller+Extension.swift */; };
-		76B89CEC248EBD6B00457529 /* BullsEyeGameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B89CEB248EBD6B00457529 /* BullsEyeGameResult.swift */; };
+		76B89CE8248E837A00457529 /* BullsEyeGameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B89CE7248E837A00457529 /* BullsEyeGameResult.swift */; };
+		76B89CEA248EA5AD00457529 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B89CE9248EA5AD00457529 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		352A679520D171E800D5BF05 /* Bulls Eye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bulls Eye.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		352A679520D171E800D5BF05 /* Rev Bulls Eye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rev Bulls Eye.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		352A679820D171E800D5BF05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		352A679A20D171E800D5BF05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		352A679F20D171EA00D5BF05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		352A67A220D171EA00D5BF05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		352A67A420D171EA00D5BF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		762F09A1248DAE3000E5FDD3 /* BullsEyeGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BullsEyeGame.swift; sourceTree = "<group>"; };
 		76896CFA248D7706008F575C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		76896CFF248D9EA6008F575C /* UIViewcontroller+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewcontroller+Extension.swift"; sourceTree = "<group>"; };
-		76B89CEB248EBD6B00457529 /* BullsEyeGameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEyeGameResult.swift; sourceTree = "<group>"; };
+		76B89CE7248E837A00457529 /* BullsEyeGameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEyeGameResult.swift; sourceTree = "<group>"; };
+		76B89CE9248EA5AD00457529 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +44,7 @@
 		352A678C20D171E800D5BF05 = {
 			isa = PBXGroup;
 			children = (
-				352A679720D171E800D5BF05 /* BullsEye */,
+				352A679720D171E800D5BF05 /* RevBullsEye */,
 				352A679620D171E800D5BF05 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,12 +52,12 @@
 		352A679620D171E800D5BF05 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				352A679520D171E800D5BF05 /* Bulls Eye.app */,
+				352A679520D171E800D5BF05 /* Rev Bulls Eye.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		352A679720D171E800D5BF05 /* BullsEye */ = {
+		352A679720D171E800D5BF05 /* RevBullsEye */ = {
 			isa = PBXGroup;
 			children = (
 				76896CFE248D9E87008F575C /* Extensions */,
@@ -69,14 +69,14 @@
 				352A67A120D171EA00D5BF05 /* LaunchScreen.storyboard */,
 				352A67A420D171EA00D5BF05 /* Info.plist */,
 			);
-			path = BullsEye;
+			path = RevBullsEye;
 			sourceTree = "<group>";
 		};
 		76896CF7248D762E008F575C /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				762F09A1248DAE3000E5FDD3 /* BullsEyeGame.swift */,
-				76B89CEB248EBD6B00457529 /* BullsEyeGameResult.swift */,
+				76B89CE7248E837A00457529 /* BullsEyeGameResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -92,7 +92,7 @@
 		76896CF9248D763E008F575C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				352A679A20D171E800D5BF05 /* ViewController.swift */,
+				76B89CE9248EA5AD00457529 /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -108,9 +108,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		352A679420D171E800D5BF05 /* BullsEye */ = {
+		352A679420D171E800D5BF05 /* RevBullsEye */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 352A67A720D171EA00D5BF05 /* Build configuration list for PBXNativeTarget "BullsEye" */;
+			buildConfigurationList = 352A67A720D171EA00D5BF05 /* Build configuration list for PBXNativeTarget "RevBullsEye" */;
 			buildPhases = (
 				352A679120D171E800D5BF05 /* Sources */,
 				352A679220D171E800D5BF05 /* Frameworks */,
@@ -120,9 +120,9 @@
 			);
 			dependencies = (
 			);
-			name = BullsEye;
+			name = RevBullsEye;
 			productName = BullsEye;
-			productReference = 352A679520D171E800D5BF05 /* Bulls Eye.app */;
+			productReference = 352A679520D171E800D5BF05 /* Rev Bulls Eye.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -140,7 +140,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 352A679020D171E800D5BF05 /* Build configuration list for PBXProject "BullsEye" */;
+			buildConfigurationList = 352A679020D171E800D5BF05 /* Build configuration list for PBXProject "RevBullsEye" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -153,7 +153,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				352A679420D171E800D5BF05 /* BullsEye */,
+				352A679420D171E800D5BF05 /* RevBullsEye */,
 			);
 		};
 /* End PBXProject section */
@@ -176,11 +176,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76B89CEA248EA5AD00457529 /* ViewController.swift in Sources */,
 				762F09A2248DAE3000E5FDD3 /* BullsEyeGame.swift in Sources */,
-				76B89CEC248EBD6B00457529 /* BullsEyeGameResult.swift in Sources */,
 				76896D00248D9EA6008F575C /* UIViewcontroller+Extension.swift in Sources */,
-				352A679B20D171E800D5BF05 /* ViewController.swift in Sources */,
 				352A679920D171E800D5BF05 /* AppDelegate.swift in Sources */,
+				76B89CE8248E837A00457529 /* BullsEyeGameResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,13 +318,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = BullsEye/Info.plist;
+				INFOPLIST_FILE = RevBullsEye/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.BullsEye;
-				PRODUCT_NAME = "Bulls Eye";
+				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.RevBullsEye;
+				PRODUCT_NAME = "Rev Bulls Eye";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -336,13 +336,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = BullsEye/Info.plist;
+				INFOPLIST_FILE = RevBullsEye/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.BullsEye;
-				PRODUCT_NAME = "Bulls Eye";
+				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.RevBullsEye;
+				PRODUCT_NAME = "Rev Bulls Eye";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -351,7 +351,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		352A679020D171E800D5BF05 /* Build configuration list for PBXProject "BullsEye" */ = {
+		352A679020D171E800D5BF05 /* Build configuration list for PBXProject "RevBullsEye" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				352A67A520D171EA00D5BF05 /* Debug */,
@@ -360,7 +360,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		352A67A720D171EA00D5BF05 /* Build configuration list for PBXNativeTarget "BullsEye" */ = {
+		352A67A720D171EA00D5BF05 /* Build configuration list for PBXNativeTarget "RevBullsEye" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				352A67A820D171EA00D5BF05 /* Debug */,

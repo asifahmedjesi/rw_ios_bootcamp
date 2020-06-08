@@ -1,28 +1,30 @@
-//
-//  BullsEyeGame.swift
-//  BullsEye
-//
-//  Created by Asif Ahmed Jesi on 8/6/20.
-//  Copyright © 2020 Ray Wenderlich. All rights reserved.
-//
 
 import Foundation
 
 class BullsEyeGame {
 
-    var currentValue = 0
+    var currentValue = RGB()
 
-    private(set) var targetValue = 0
+    private(set) var targetValue = RGB()
     private(set) var score = 0
     private(set) var round = 0
 
-    private var points = 0
     private var difference: Int {
         get {
-            return abs(self.targetValue - self.currentValue)
+            return Int((targetValue.difference(target: currentValue) * 100).rounded())
+        }
+    }    
+    private var points = 0
+    
+    var quickDiff: (rDiff: Int, gDiff: Int, bDiff: Int) {
+        get {
+            let r = abs(targetValue.r - currentValue.r)
+            let g = abs(targetValue.g - currentValue.g)
+            let b = abs(targetValue.b - currentValue.b)
+            return (rDiff: r, gDiff: g, bDiff: b)
         }
     }
-
+    
     func start() {
         self.score = 0
         self.round = 0
@@ -30,8 +32,8 @@ class BullsEyeGame {
     }
     func startRound() {
         self.round += 1
-        self.targetValue = Int.random(in: 1...100)
-        self.currentValue = 100/2
+        self.targetValue = RGB.random()
+        self.currentValue = RGB()
     }
     func getResult() -> BullsEyeGameResult {
         self.calculatePoints()
@@ -56,7 +58,7 @@ class BullsEyeGame {
     private func calculatePoints() {
         self.points = 100 - difference
         self.calculateBonusPoints()
-        self.score += points        
+        self.score += points
     }
     private func calculateBonusPoints() {
         if difference == 0 {

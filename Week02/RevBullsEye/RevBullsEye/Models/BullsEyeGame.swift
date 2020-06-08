@@ -9,20 +9,20 @@
 import Foundation
 
 class BullsEyeGame {
-
+    
     var currentValue = 0
-
+    
     private(set) var targetValue = 0
     private(set) var score = 0
     private(set) var round = 0
-
+    
     private var points = 0
-    private var difference: Int {
+    private var quickDiff: Int {
         get {
             return abs(self.targetValue - self.currentValue)
         }
     }
-
+    
     func start() {
         self.score = 0
         self.round = 0
@@ -37,13 +37,13 @@ class BullsEyeGame {
         self.calculatePoints()
         
         var feedback: String = ""
-        if difference == 0 {
+        if quickDiff == 0 {
           feedback = "Perfect!"
         }
-        else if difference < 5 {
+        else if quickDiff < 5 {
           feedback = "You almost had it!"
         }
-        else if difference < 10 {
+        else if quickDiff < 10 {
           feedback = "Pretty good!"
         }
         else {
@@ -54,16 +54,16 @@ class BullsEyeGame {
     }
     
     private func calculatePoints() {
-        self.points = 100 - difference
+        self.points = 100 - self.quickDiff
         self.calculateBonusPoints()
         self.score += points        
     }
     private func calculateBonusPoints() {
-        if difference == 0 {
+        if quickDiff == 0 {
             self.points += 100
         }
-        else if difference < 5 {
-            if difference == 1 {
+        else if quickDiff < 5 {
+            if quickDiff == 1 {
                 self.points += 50
             }
         }

@@ -14,50 +14,45 @@ class ViewController: UIViewController {
     @IBOutlet weak var targetLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var roundLabel: UILabel!
-    
+
     var game = BullsEyeGame()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let roundedValue = slider.value.rounded()
-        game.currentValue = Int(roundedValue)
-        game.start()
-        updateView()
+        self.game.start()
+        self.updateView()
     }
 
     @IBAction func showAlert() {
-        
-        let result = game.getResult()
+        let result = self.game.getResult()
         let title = result.feedback
         let message = "You scored \(result.points) points"
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: { action in
+        
+        self.showAlert(title: title, message: message) { action in
             self.game.startRound()
             self.updateView()
-        })
-        alert.addAction(action)
-
-        present(alert, animated: true, completion: nil)
+        }
     }
 
     @IBAction func sliderMoved(_ slider: UISlider) {
-        let roundedValue = slider.value.rounded()
-        game.currentValue = Int(roundedValue)
+        self.game.currentValue = Int(slider.value.rounded())
     }
-    
+
     func updateView() {
-        targetLabel.text = String(game.targetValue)
-        scoreLabel.text = String(game.score)
-        roundLabel.text = String(game.round)
-        slider.value = Float(game.currentValue)
+        targetLabel.text = String(self.game.targetValue)
+        scoreLabel.text = String(self.game.score)
+        roundLabel.text = String(self.game.round)
+        slider.value = Float(self.game.currentValue)
+        
+        print("Target Value: \(self.game.targetValue)")
     }
 
     @IBAction func startNewGame() {
-        game.start()
+        self.game.start()
         self.updateView()
     }
-  
+
 }
 
 

@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BullsEye" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RevBullsEye" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,12 +25,6 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Put the Bull's Eye as close as you can to:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNQ-gw-Ja0">
                                 <rect key="frame" x="85.5" y="54" width="309.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfg-HP-Gt1">
-                                <rect key="frame" x="399" y="54" width="28.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -112,6 +106,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GP7-2v-8SE">
+                                <rect key="frame" x="403" y="47.5" width="50" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="WW2-Id-C00"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -121,9 +123,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="3A4-Ih-jW4" secondAttribute="trailing" constant="25" id="5qi-jV-nWO"/>
                             <constraint firstItem="CIz-gQ-wH7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="96C-4C-9dl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iAf-Xz-bBv" secondAttribute="trailing" constant="60" id="Be4-tz-OfE"/>
+                            <constraint firstItem="GP7-2v-8SE" firstAttribute="leading" secondItem="cNQ-gw-Ja0" secondAttribute="trailing" constant="8" id="GTc-1r-Z8c"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CIz-gQ-wH7" secondAttribute="trailing" constant="25" id="Haq-go-4J9"/>
-                            <constraint firstItem="Qfg-HP-Gt1" firstAttribute="centerY" secondItem="cNQ-gw-Ja0" secondAttribute="centerY" id="I9R-YU-7Dq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Qfg-HP-Gt1" secondAttribute="trailing" constant="200" id="IxH-qr-Sld"/>
                             <constraint firstItem="3A4-Ih-jW4" firstAttribute="leading" secondItem="iAf-Xz-bBv" secondAttribute="trailing" constant="4" id="JbI-jf-l3M"/>
                             <constraint firstItem="ygL-t6-6Ap" firstAttribute="centerY" secondItem="iAf-Xz-bBv" secondAttribute="centerY" id="KgR-Gu-nwz"/>
                             <constraint firstItem="iAf-Xz-bBv" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-30" id="Mbj-KV-Jr3"/>
@@ -134,20 +135,21 @@
                             <constraint firstItem="qhX-C6-Xcr" firstAttribute="centerX" secondItem="iAf-Xz-bBv" secondAttribute="centerX" id="goH-I2-m9L"/>
                             <constraint firstItem="cNQ-gw-Ja0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="54" id="hEp-c8-Z6x"/>
                             <constraint firstItem="iAf-Xz-bBv" firstAttribute="leading" secondItem="ygL-t6-6Ap" secondAttribute="trailing" constant="4" id="hPz-ZS-liK"/>
-                            <constraint firstItem="Qfg-HP-Gt1" firstAttribute="leading" secondItem="cNQ-gw-Ja0" secondAttribute="trailing" constant="4" id="xHu-Vm-TVh"/>
+                            <constraint firstItem="GP7-2v-8SE" firstAttribute="centerY" secondItem="cNQ-gw-Ja0" secondAttribute="centerY" id="jjp-AL-yXG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="guessText" destination="GP7-2v-8SE" id="wTc-tj-rKC"/>
+                        <outlet property="hitMeButton" destination="qhX-C6-Xcr" id="FL2-ke-8cb"/>
                         <outlet property="roundLabel" destination="kZC-Qn-43h" id="w0M-SF-y23"/>
                         <outlet property="scoreLabel" destination="A1a-5t-e5q" id="oyY-uK-PzX"/>
                         <outlet property="slider" destination="iAf-Xz-bBv" id="H2j-bM-Tr7"/>
-                        <outlet property="targetLabel" destination="Qfg-HP-Gt1" id="Yap-fx-j9F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-9" y="7"/>
+            <point key="canvasLocation" x="-228" y="-90"/>
         </scene>
     </scenes>
 </document>
