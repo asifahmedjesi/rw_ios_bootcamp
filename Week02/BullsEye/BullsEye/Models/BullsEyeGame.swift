@@ -17,7 +17,7 @@ class BullsEyeGame {
     private(set) var round = 0
 
     private var points = 0
-    private var difference: Int {
+    var difference: Int {
         get {
             return abs(self.targetValue - self.currentValue)
         }

@@ -37,6 +37,7 @@ class ViewController: UIViewController {
 
     @IBAction func sliderMoved(_ slider: UISlider) {
         self.game.currentValue = Int(slider.value.rounded())
+        self.slider.minimumTrackTintColor = UIColor.blue.withAlphaComponent(CGFloat(game.difference)/100.0)
     }
 
     func updateView() {
@@ -44,6 +45,8 @@ class ViewController: UIViewController {
         scoreLabel.text = String(self.game.score)
         roundLabel.text = String(self.game.round)
         slider.value = Float(self.game.currentValue)
+        
+        self.slider.minimumTrackTintColor = UIColor.blue.withAlphaComponent(1)
         
         print("Target Value: \(self.game.targetValue)")
     }
