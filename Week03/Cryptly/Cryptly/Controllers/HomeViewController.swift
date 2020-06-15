@@ -21,12 +21,12 @@ class HomeViewController: UIViewController{
   override func viewDidLoad() {
     super.viewDidLoad()
     setViewData()
-    setTheme()
   }
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     self.registerForTheme()
+    setTheme()
   }
 
   override func viewWillDisappear(_ animated: Bool) {
