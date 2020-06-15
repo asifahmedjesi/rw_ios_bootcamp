@@ -14,15 +14,27 @@ class CryptoCurrencyManager {
   
   private init() {}
 
-  func getOwnedCryptoCurrencyNames() -> [String] {
-    return self.list.map { $0.name }
+  func getOwnedCryptoCurrencyNames() -> String {
+    return String(self.list.reduce("") { $0 + $1.name + ", " }.dropLast(2))
   }
-  func getRisingCryptoCurrencyNames() -> [String] {
-    return self.list.filter { $0.trend == .rising } .map { $0.name }
+  //func getOwnedCryptoCurrencyNames() -> String {
+  //  return self.list.map { $0.name }.joined(separator: ", ")
+  //}
+
+  func getRisingCryptoCurrencyNames() -> String {
+    return String(self.list.filter { $0.trend == .rising } .reduce("") { $0 + $1.name + ", " }.dropLast(2))
   }
-  func getFallingCryptoCurrencyNames() -> [String] {
-    return self.list.filter { $0.trend == .falling } .map { $0.name }
+  //func getRisingCryptoCurrencyNames() -> String {
+  //  return self.list.filter { $0.trend == .rising } .map { $0.name }.joined(separator: ", ")
+  //}
+
+  func getFallingCryptoCurrencyNames() -> String {
+    return String(self.list.filter { $0.trend == .falling } .reduce("") { $0 + $1.name + ", " }.dropLast(2))
   }
+  //func getFallingCryptoCurrencyNames() -> String {
+  //  return self.list.filter { $0.trend == .falling } .map { $0.name }.joined(separator: ", ")
+  //}
+
   func getMostFallingValue() -> Double {
     return list.filter({ $0.trend == .falling }).map({ $0.valueRise }).min() ?? 0.0
   }

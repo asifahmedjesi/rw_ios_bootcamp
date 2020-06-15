@@ -35,9 +35,9 @@ class HomeViewController: UIViewController{
   }
 
   func setViewData() {
-    self.view1TextLabel.text = CryptoCurrencyManager.shared.getOwnedCryptoCurrencyNames().joined(separator: ", ")
-    self.view2TextLabel.text = CryptoCurrencyManager.shared.getRisingCryptoCurrencyNames().joined(separator: ", ")
-    self.view3TextLabel.text = CryptoCurrencyManager.shared.getFallingCryptoCurrencyNames().joined(separator: ", ")
+    self.view1TextLabel.text = CryptoCurrencyManager.shared.getOwnedCryptoCurrencyNames()
+    self.view2TextLabel.text = CryptoCurrencyManager.shared.getRisingCryptoCurrencyNames()
+    self.view3TextLabel.text = CryptoCurrencyManager.shared.getFallingCryptoCurrencyNames()
     self.view5TextLabel.text = CryptoCurrencyManager.shared.getMostFallingValue().description
     self.view7TextLabel.text = CryptoCurrencyManager.shared.getMostRisingValue().description
   }
