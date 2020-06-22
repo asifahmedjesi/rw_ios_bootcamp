@@ -14,8 +14,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var buttonNextItemCalculate: UIButton!
+    @IBOutlet weak var person1RatingLabel: UILabel!
+    @IBOutlet weak var person2RatingLabel: UILabel!
     
-    var compatibilityItems = ["Cats", "Dogs" , "Tigers"] // Add more!
+    var compatibilityItems = ["Cats", "Dogs" , "Tigers"]
+    var ratings = ["Terrible": 1, "Bad": 2, "Meh": 3, "Good": 4, "Great": 5 ]
     var currentItemIndex = 0
 
     var person1 = Person(id: 1, items: [:])
@@ -30,6 +33,7 @@ class ViewController: UIViewController {
         resetSlider()
         setCompatibilityItemTitle()
         updateTitle()
+        clearRatingLabels()
     }
 
     @IBAction func sliderValueChanged(_ sender: UISlider) {
@@ -56,14 +60,22 @@ class ViewController: UIViewController {
         if currentItemIndex >= compatibilityItems.count { return }
         
         current.items.updateValue(slider.value, forKey: compatibilityItems[currentItemIndex])
-        
         print("\(compatibilityItems[currentItemIndex]): \(Int(slider.value))")
+        
+        if current.id == person1.id {
+            updateRatingLabel(label: person1RatingLabel, title: "Person 1 Ratings:")
+        }
+        if current.id == person2.id {
+            updateRatingLabel(label: person2RatingLabel, title: "Person 2 Ratings:")
+        }
         
         if currentItemIndex == compatibilityItems.count - 1 && current.id == person1.id {
             currentPerson = person2
         }
         else if currentItemIndex == compatibilityItems.count - 1 && current.id == person2.id {
-            showResults(score: calculateCompatibility())
+            showResults(score: calculateCompatibility()) { aciton in
+                self.clearRatingLabels()
+            }
             currentPerson = person1
             clearAllScores()
         }
@@ -74,6 +86,24 @@ class ViewController: UIViewController {
         resetSlider()
         setCompatibilityItemTitle()
         updateTitle()
+    }
+    
+    func clearRatingLabels() {
+        person1RatingLabel.text = "Person 1 Ratings:"
+        person2RatingLabel.text = "Person 2 Ratings:"
+    }
+    
+    func updateRatingLabel(label: UILabel, title: String) {
+        
+        guard let current = currentPerson else { return }
+        
+        var fullstring: String = title + "\n"
+        for item in current.items {
+            if let rating = ratings.first(where: { (key, value) -> Bool in value == Int(item.value) }) {
+                fullstring.append(contentsOf: "\(item.key): \(rating.key)\n")
+            }
+        }
+        label.text = fullstring
     }
     
     func setCompatibilityItemTitle() {
@@ -102,9 +132,9 @@ class ViewController: UIViewController {
         person2.items.removeAll()
     }
     
-    func showResults(score: String) {
+    func showResults(score: String, completion: ((UIAlertAction) -> Void)?) {
         let alert = UIAlertController(title: "Results", message: "You two are \(score) compatible.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: completion))
         self.present(alert, animated: true)
     }
 
@@ -121,6 +151,7 @@ class ViewController: UIViewController {
         let sumOfAllPercentages = percentagesForAllItems.reduce(0, +)
         let matchPercentage = sumOfAllPercentages/Double(compatibilityItems.count)
         print(matchPercentage, "%")
+        
         let matchString = 100 - (matchPercentage * 100).rounded()
         return "\(matchString)%"
     }
