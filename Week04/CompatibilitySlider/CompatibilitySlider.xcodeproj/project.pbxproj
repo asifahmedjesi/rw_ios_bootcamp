@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76A895FC249F60470085529B /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A895FB249F60470085529B /* GameManager.swift */; };
 		C3017C402499C83A00B1E49A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3017C3F2499C83A00B1E49A /* AppDelegate.swift */; };
 		C3017C422499C83A00B1E49A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3017C412499C83A00B1E49A /* SceneDelegate.swift */; };
 		C3017C442499C83A00B1E49A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3017C432499C83A00B1E49A /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76A895FB249F60470085529B /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		C3017C3C2499C83A00B1E49A /* CompatibilitySlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompatibilitySlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3017C3F2499C83A00B1E49A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3017C412499C83A00B1E49A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76A895F7249F5F2F0085529B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C3017C722499C91700B1E49A /* Person.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		76A895F8249F5F3C0085529B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C3017C452499C83A00B1E49A /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		76A895F9249F5F450085529B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C3017C432499C83A00B1E49A /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		76A895FA249F60090085529B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				76A895FB249F60470085529B /* GameManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		C3017C332499C83A00B1E49A = {
 			isa = PBXGroup;
 			children = (
@@ -103,11 +137,12 @@
 		C3017C3E2499C83A00B1E49A /* CompatibilitySlider */ = {
 			isa = PBXGroup;
 			children = (
+				76A895FA249F60090085529B /* Managers */,
+				76A895F9249F5F450085529B /* Controllers */,
+				76A895F8249F5F3C0085529B /* Views */,
+				76A895F7249F5F2F0085529B /* Models */,
 				C3017C3F2499C83A00B1E49A /* AppDelegate.swift */,
 				C3017C412499C83A00B1E49A /* SceneDelegate.swift */,
-				C3017C432499C83A00B1E49A /* ViewController.swift */,
-				C3017C722499C91700B1E49A /* Person.swift */,
-				C3017C452499C83A00B1E49A /* Main.storyboard */,
 				C3017C4B2499C83B00B1E49A /* Assets.xcassets */,
 				C3017C4D2499C83B00B1E49A /* LaunchScreen.storyboard */,
 				C3017C502499C83B00B1E49A /* Info.plist */,
@@ -266,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3017C732499C91700B1E49A /* Person.swift in Sources */,
+				76A895FC249F60470085529B /* GameManager.swift in Sources */,
 				C3017C4A2499C83A00B1E49A /* CompatibilitySlider_Start.xcdatamodeld in Sources */,
 				C3017C442499C83A00B1E49A /* ViewController.swift in Sources */,
 				C3017C402499C83A00B1E49A /* AppDelegate.swift in Sources */,

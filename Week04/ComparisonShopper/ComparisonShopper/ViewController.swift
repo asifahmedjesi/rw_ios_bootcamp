@@ -27,11 +27,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.house1 = getNewHouse(address: "New York", price: "$12,000", bedrooms: "3 bedrooms")
+        
         setUpLeftSideUI()
         setUpRightSideUI()
-
-        house1?.price = "$12,000"
-        house1?.bedrooms = "3 bedrooms"
     }
 
     func setUpLeftSideUI() {
@@ -41,12 +41,20 @@ class ViewController: UIViewController {
     }
 
     func setUpRightSideUI() {
+        
         if house2 == nil {
+            
             titleLabelRight.alpha = 0
             imageViewRight.alpha = 0
             priceLabelRight.alpha = 0
             roomLabelRight.alpha = 0
         } else {
+            
+            titleLabelRight.alpha = 1
+            imageViewRight.alpha = 1
+            priceLabelRight.alpha = 1
+            roomLabelRight.alpha = 1
+            
             titleLabelRight.text! = house2!.address!
             priceLabelRight.text! = house2!.price!
             roomLabelRight.text! = house2!.bedrooms!
@@ -75,15 +83,24 @@ class ViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:nil))
 
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler:{ (UIAlertAction) in
-            var house = House()
-            house.address = alert.textFields?[0].text
-            house.price = alert.textFields?[1].text
-            house.bedrooms = alert.textFields?[2].text
-            self.house2 = house
+            
+            let address = alert.textFields?[0].text ?? ""
+            let price = "$\(alert.textFields?[1].text ?? "")"
+            let bedrooms = "\(alert.textFields?[2].text ?? "") bedrooms"
+            
+            self.house2 = self.getNewHouse(address: address, price: price, bedrooms: bedrooms)
             self.setUpRightSideUI()
         }))
 
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func getNewHouse(address: String, price: String, bedrooms: String) -> House {
+        var house = House()
+        house.address = address
+        house.price = price
+        house.bedrooms = bedrooms
+        return house
     }
 
 }
