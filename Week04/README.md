@@ -5,10 +5,10 @@ This is an iOS bootcamp organized by raywenderlich.com/
 # ComparisonShopper
 
 # With 1 House
-![With 1 House](Screenshots/comparison_1.png)
+![With 1 House](Screenshots/comparison_2.png)
 
 # With 2 House
-![With 2 House](Screenshots/comparison_2.png)
+![With 2 House](Screenshots/comparison_1.png)
 
 # CompatibilitySlider
 
