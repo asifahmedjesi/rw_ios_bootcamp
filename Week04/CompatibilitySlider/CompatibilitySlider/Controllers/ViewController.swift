@@ -16,6 +16,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonNextItemCalculate: UIButton!
     @IBOutlet weak var person1RatingLabel: UILabel!
     @IBOutlet weak var person2RatingLabel: UILabel!
+    @IBOutlet weak var terribleImage: UIImageView!
+    @IBOutlet weak var badImage: UIImageView!
+    @IBOutlet weak var mehImage: UIImageView!
+    @IBOutlet weak var goodImage: UIImageView!
+    @IBOutlet weak var greatImage: UIImageView!
     
     var compatibilityItems = ["Cats", "Dogs" , "Tigers"]
     var ratings = ["Terrible": 1, "Bad": 2, "Meh": 3, "Good": 4, "Great": 5 ]
@@ -34,6 +39,44 @@ class ViewController: UIViewController {
         setCompatibilityItemTitle()
         updateTitle()
         clearRatingLabels()
+        
+        setupTapGesturesRatings()
+    }
+    
+    func setupTapGesturesRatings() {
+        
+        let terribleTap = UITapGestureRecognizer(target: self, action: #selector(self.handleTapGesture(gesture:)))
+        terribleImage.isUserInteractionEnabled = true
+        terribleImage.tag = 1
+        terribleImage.addGestureRecognizer(terribleTap)
+        
+        let badTap = UITapGestureRecognizer(target: self, action: #selector(self.handleTapGesture(gesture:)))
+        badImage.isUserInteractionEnabled = true
+        badImage.tag = 2
+        badImage.addGestureRecognizer(badTap)
+        
+        let mehTap = UITapGestureRecognizer(target: self, action: #selector(self.handleTapGesture(gesture:)))
+        mehImage.isUserInteractionEnabled = true
+        mehImage.tag = 3
+        mehImage.addGestureRecognizer(mehTap)
+        
+        let goodTap = UITapGestureRecognizer(target: self, action: #selector(self.handleTapGesture(gesture:)))
+        goodImage.isUserInteractionEnabled = true
+        goodImage.tag = 4
+        goodImage.addGestureRecognizer(goodTap)
+        
+        let greatTap = UITapGestureRecognizer(target: self, action: #selector(self.handleTapGesture(gesture:)))
+        greatImage.isUserInteractionEnabled = true
+        greatImage.tag = 5
+        greatImage.addGestureRecognizer(greatTap)
+    }
+    
+    @objc func handleTapGesture(gesture : UITapGestureRecognizer)
+    {
+        guard let v = gesture.view else { return }
+        let tag = v.tag
+        
+        slider.value = Float(tag)
     }
 
     @IBAction func sliderValueChanged(_ sender: UISlider) {

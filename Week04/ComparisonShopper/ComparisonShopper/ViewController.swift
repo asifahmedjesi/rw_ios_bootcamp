@@ -85,8 +85,8 @@ class ViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler:{ (UIAlertAction) in
             
             let address = alert.textFields?[0].text ?? ""
-            let price = "$\(alert.textFields?[1].text ?? "")"
-            let bedrooms = "\(alert.textFields?[2].text ?? "") bedrooms"
+            let price = alert.textFields?[1].text ?? ""
+            let bedrooms = alert.textFields?[2].text ?? ""
             
             self.house2 = self.getNewHouse(address: address, price: price, bedrooms: bedrooms)
             self.setUpRightSideUI()

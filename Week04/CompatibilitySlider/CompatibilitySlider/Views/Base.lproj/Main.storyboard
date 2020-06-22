@@ -121,12 +121,17 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="badImage" destination="Oso-n0-SLr" id="M9B-T9-eZ0"/>
                         <outlet property="buttonNextItemCalculate" destination="d1w-P6-8nd" id="rBh-qd-YcV"/>
                         <outlet property="compatibilityItemLabel" destination="yar-uD-3oE" id="kTc-yF-rlr"/>
+                        <outlet property="goodImage" destination="UDX-5m-69w" id="wFV-O0-ALf"/>
+                        <outlet property="greatImage" destination="5XL-nc-oMm" id="hUR-E2-wko"/>
+                        <outlet property="mehImage" destination="y6k-Xb-g0a" id="ego-hM-cNG"/>
                         <outlet property="person1RatingLabel" destination="oT1-Qf-cUz" id="9an-O3-DQz"/>
                         <outlet property="person2RatingLabel" destination="MaF-oN-chD" id="U8V-UH-yMZ"/>
                         <outlet property="questionLabel" destination="vPk-A6-VfC" id="b55-99-ew0"/>
                         <outlet property="slider" destination="Qva-iw-efA" id="HPI-rv-5Os"/>
+                        <outlet property="terribleImage" destination="MHE-4j-X35" id="2Bj-FI-AZa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
