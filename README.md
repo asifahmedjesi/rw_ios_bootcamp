@@ -14,9 +14,10 @@ This is an iOS bootcamp organized by raywenderlich.com/
 	- **City:** Dhaka
 
 - **Programming Experience:** 
-	- 9 years of experience in .NET platform using C#
-	- 1 year of experience in android platform using JAVA
-	- 2 years of experience in iOS platform using Swift 
+	- 12+ years of experience. During this time I've worked in the following technologies,
+		a. .NET platform using C# (8 years)
+		b. Android platform using JAVA (1 years)
+		c. iOS platform using Swift (3+ years)
 
 - **Goals:** To become one of the best iOS Software Architect in this world
 
