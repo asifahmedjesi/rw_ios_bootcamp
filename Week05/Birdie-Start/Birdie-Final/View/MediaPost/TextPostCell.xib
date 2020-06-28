@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="115" id="KGk-i7-Jjw" customClass="TextPostCell" customModule="Birdie_Final" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jeff" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IkN-nw-U7b">
+                        <rect key="frame" x="74" y="10" width="230" height="19"/>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mascot_swift-badge" translatesAutoresizingMaskIntoConstraints="NO" id="hw5-As-y5y">
+                        <rect key="frame" x="16" y="8" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="Naj-z1-PYA"/>
+                            <constraint firstAttribute="width" secondItem="hw5-As-y5y" secondAttribute="height" multiplier="1:1" id="ymb-7W-wHa"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 June, 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWe-y3-LPa">
+                        <rect key="frame" x="74" y="37" width="230" height="17"/>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the body text for this post." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axw-Bn-1bR">
+                        <rect key="frame" x="16" y="66" width="288" height="17"/>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="axw-Bn-1bR" secondAttribute="bottom" constant="17" id="Pak-Ls-fUl"/>
+                    <constraint firstItem="hw5-As-y5y" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="QMW-37-Iwl"/>
+                    <constraint firstItem="IkN-nw-U7b" firstAttribute="top" secondItem="hw5-As-y5y" secondAttribute="top" constant="2" id="Rcr-ld-3if"/>
+                    <constraint firstAttribute="trailing" secondItem="axw-Bn-1bR" secondAttribute="trailing" constant="16" id="Z6Q-bZ-UE4"/>
+                    <constraint firstItem="axw-Bn-1bR" firstAttribute="top" secondItem="hw5-As-y5y" secondAttribute="bottom" constant="8" id="eff-pW-4il"/>
+                    <constraint firstItem="NWe-y3-LPa" firstAttribute="trailing" secondItem="IkN-nw-U7b" secondAttribute="trailing" id="hqH-pX-Qjb"/>
+                    <constraint firstAttribute="trailing" secondItem="IkN-nw-U7b" secondAttribute="trailing" constant="16" id="jPB-O4-dKh"/>
+                    <constraint firstItem="axw-Bn-1bR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="jY7-dE-TVt"/>
+                    <constraint firstItem="NWe-y3-LPa" firstAttribute="top" secondItem="IkN-nw-U7b" secondAttribute="bottom" constant="8" id="kaA-hM-p35"/>
+                    <constraint firstItem="IkN-nw-U7b" firstAttribute="leading" secondItem="hw5-As-y5y" secondAttribute="trailing" constant="8" id="ke0-Mh-4VN"/>
+                    <constraint firstItem="NWe-y3-LPa" firstAttribute="leading" secondItem="IkN-nw-U7b" secondAttribute="leading" id="l7p-e4-H4A"/>
+                    <constraint firstItem="hw5-As-y5y" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="ogX-dC-Upm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bodytextLabel" destination="axw-Bn-1bR" id="aXl-4H-6bv"/>
+                <outlet property="postedOnLabel" destination="NWe-y3-LPa" id="ZZ0-Kl-dO6"/>
+                <outlet property="titleLabel" destination="IkN-nw-U7b" id="pW9-i3-vdD"/>
+            </connections>
+            <point key="canvasLocation" x="14" y="-78"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="mascot_swift-badge" width="1000" height="1000"/>
+    </resources>
+</document>
