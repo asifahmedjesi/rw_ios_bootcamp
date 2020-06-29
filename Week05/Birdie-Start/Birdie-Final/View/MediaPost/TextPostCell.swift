@@ -14,6 +14,10 @@ class TextPostCell: BaseTableViewCell {
     @IBOutlet weak var postedOnLabel: UILabel!
     @IBOutlet weak var bodytextLabel: UILabel!
     
+    static var heightForCell: CGFloat {
+        UITableView.automaticDimension
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

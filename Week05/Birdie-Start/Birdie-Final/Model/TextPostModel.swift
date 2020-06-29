@@ -13,3 +13,4 @@ struct TextPost: MediaPost {
     var userName: String
     var timestamp: Date
 }
+

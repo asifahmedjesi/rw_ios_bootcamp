@@ -15,6 +15,10 @@ class ImagePostCell: BaseTableViewCell {
     @IBOutlet weak var bodytextLabel: UILabel!
     @IBOutlet weak var bodyImage: UIImageView!
     
+    static var heightForCell: CGFloat {
+        UITableView.automaticDimension
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

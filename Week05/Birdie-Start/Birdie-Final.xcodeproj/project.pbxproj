@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76AE4A3524A9D19600E845E6 /* DateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE4A3424A9D19600E845E6 /* DateHandler.swift */; };
+		76AE4A3724A9DB1300E845E6 /* MediaPostRepresentableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE4A3624A9DB1300E845E6 /* MediaPostRepresentableProtocol.swift */; };
+		76AE4A3924A9DB2500E845E6 /* TextPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE4A3824A9DB2500E845E6 /* TextPostViewModel.swift */; };
+		76AE4A3B24A9DB3600E845E6 /* ImagePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE4A3A24A9DB3600E845E6 /* ImagePostViewModel.swift */; };
+		76AE4A3D24A9ECF400E845E6 /* MediaPostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE4A3C24A9ECF400E845E6 /* MediaPostsViewModel.swift */; };
+		76AE4A3F24A9EE2A00E845E6 /* MediaPostsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE4A3E24A9EE2A00E845E6 /* MediaPostsViewModelProtocol.swift */; };
+		76AE4A5024AA50EF00E845E6 /* DynamicMediaPostRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE4A4F24AA50EE00E845E6 /* DynamicMediaPostRepresentable.swift */; };
+		76AE4A5224AA511B00E845E6 /* MediaPostsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE4A5124AA511B00E845E6 /* MediaPostsDataSource.swift */; };
 		76EA7BB024A924E300F1F073 /* TextPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EA7BAE24A924E300F1F073 /* TextPostCell.swift */; };
 		76EA7BB124A924E300F1F073 /* TextPostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76EA7BAF24A924E300F1F073 /* TextPostCell.xib */; };
 		76EA7BB424A924F700F1F073 /* ImagePostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EA7BB224A924F700F1F073 /* ImagePostCell.swift */; };
@@ -45,6 +53,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76AE4A3424A9D19600E845E6 /* DateHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHandler.swift; sourceTree = "<group>"; };
+		76AE4A3624A9DB1300E845E6 /* MediaPostRepresentableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPostRepresentableProtocol.swift; sourceTree = "<group>"; };
+		76AE4A3824A9DB2500E845E6 /* TextPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPostViewModel.swift; sourceTree = "<group>"; };
+		76AE4A3A24A9DB3600E845E6 /* ImagePostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePostViewModel.swift; sourceTree = "<group>"; };
+		76AE4A3C24A9ECF400E845E6 /* MediaPostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPostsViewModel.swift; sourceTree = "<group>"; };
+		76AE4A3E24A9EE2A00E845E6 /* MediaPostsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPostsViewModelProtocol.swift; sourceTree = "<group>"; };
+		76AE4A4F24AA50EE00E845E6 /* DynamicMediaPostRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicMediaPostRepresentable.swift; sourceTree = "<group>"; };
+		76AE4A5124AA511B00E845E6 /* MediaPostsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPostsDataSource.swift; sourceTree = "<group>"; };
 		76EA7BAE24A924E300F1F073 /* TextPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPostCell.swift; sourceTree = "<group>"; };
 		76EA7BAF24A924E300F1F073 /* TextPostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextPostCell.xib; sourceTree = "<group>"; };
 		76EA7BB224A924F700F1F073 /* ImagePostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePostCell.swift; sourceTree = "<group>"; };
@@ -187,6 +203,7 @@
 				C3C9D396249B346E001F55A6 /* MediaPostProtocol.swift */,
 				C3C9D392249B3448001F55A6 /* TextPostModel.swift */,
 				C3C9D394249B3453001F55A6 /* ImagePostModel.swift */,
+				76AE4A3424A9D19600E845E6 /* DateHandler.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +219,13 @@
 		C3C9D39E249B3C30001F55A6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				76AE4A4F24AA50EE00E845E6 /* DynamicMediaPostRepresentable.swift */,
+				76AE4A3A24A9DB3600E845E6 /* ImagePostViewModel.swift */,
+				76AE4A3624A9DB1300E845E6 /* MediaPostRepresentableProtocol.swift */,
+				76AE4A3C24A9ECF400E845E6 /* MediaPostsViewModel.swift */,
+				76AE4A3E24A9EE2A00E845E6 /* MediaPostsViewModelProtocol.swift */,
+				76AE4A3824A9DB2500E845E6 /* TextPostViewModel.swift */,
+				76AE4A5124AA511B00E845E6 /* MediaPostsDataSource.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -340,15 +364,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3C9D393249B3448001F55A6 /* TextPostModel.swift in Sources */,
+				76AE4A5224AA511B00E845E6 /* MediaPostsDataSource.swift in Sources */,
+				76AE4A5024AA50EF00E845E6 /* DynamicMediaPostRepresentable.swift in Sources */,
 				C3C9D395249B3453001F55A6 /* ImagePostModel.swift in Sources */,
+				76AE4A3724A9DB1300E845E6 /* MediaPostRepresentableProtocol.swift in Sources */,
 				C3C9D362249B324B001F55A6 /* ViewController.swift in Sources */,
 				76EA7BB424A924F700F1F073 /* ImagePostCell.swift in Sources */,
+				76AE4A3D24A9ECF400E845E6 /* MediaPostsViewModel.swift in Sources */,
 				76EA7BB024A924E300F1F073 /* TextPostCell.swift in Sources */,
 				76EA7BB924A92CDE00F1F073 /* BaseTableViewCell.swift in Sources */,
+				76AE4A3924A9DB2500E845E6 /* TextPostViewModel.swift in Sources */,
 				C3C9D397249B346E001F55A6 /* MediaPostProtocol.swift in Sources */,
 				C3C9D39B249B3711001F55A6 /* MediaPostsHandler.swift in Sources */,
+				76AE4A3F24A9EE2A00E845E6 /* MediaPostsViewModelProtocol.swift in Sources */,
+				76AE4A3524A9D19600E845E6 /* DateHandler.swift in Sources */,
 				C3C9D368249B324B001F55A6 /* Birdie_Final.xcdatamodeld in Sources */,
 				C3C9D35E249B324B001F55A6 /* AppDelegate.swift in Sources */,
+				76AE4A3B24A9DB3600E845E6 /* ImagePostViewModel.swift in Sources */,
 				C3C9D360249B324B001F55A6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,7 +561,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Birdie-Final";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.a4aero.Birdie-Final";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -547,7 +579,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Birdie-Final";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.a4aero.Birdie-Final";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
