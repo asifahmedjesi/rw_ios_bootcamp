@@ -17,7 +17,7 @@ class DateHandler: NSObject {
 
     struct FormatString {
         static let DD_MMM_YYYY_HH_MM_A = "dd MMM yyyy, hh:mm a" // 09 Jan 2020, 11:40 AM
-        static let DD_MMM_YYYY_HH_mm = "dd MMM yyyy, HH:mm" // 09 Jan 2020, 21:40
+        static let DD_MMM_YYYY_HH_MM = "dd MMM yyyy, HH:mm" // 09 Jan 2020, 21:40
     }
 
     static func getString(date: Date, dateFormat: String) -> String {

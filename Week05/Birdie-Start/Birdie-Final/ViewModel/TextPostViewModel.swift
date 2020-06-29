@@ -23,7 +23,7 @@ class TextPostViewModel: MediaPostRepresentable {
         post.userName
     }
     var timestamp: String {
-        DateHandler.getString(date: post.timestamp, dateFormat: DateHandler.FormatString.DD_MMM_YYYY_HH_mm)
+        DateHandler.getString(date: post.timestamp, dateFormat: DateHandler.FormatString.DD_MMM_YYYY_HH_MM_A)
     }
     
     var rowHeight: CGFloat {
