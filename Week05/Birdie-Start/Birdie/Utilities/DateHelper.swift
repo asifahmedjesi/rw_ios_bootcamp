@@ -1,17 +1,16 @@
 //
-//  DateHandler.swift
-//  Birdie-Final
+//  DateHelper.swift
+//  Birdie
 //
-//  Created by Asif Ahmed Jesi on 29/6/20.
+//  Created by Asif Ahmed Jesi on 30/6/20.
 //  Copyright © 2020 Jay Strawn. All rights reserved.
 //
 
 import Foundation
-
 import UIKit
 
-class DateHandler: NSObject {
-    static let shared = DateHandler()
+class DateHelper: NSObject {
+    static let shared = DateHelper()
 
     private static let dateFormatter = DateFormatter()
 

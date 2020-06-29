@@ -12,3 +12,7 @@ protocol MediaPostRepresentable {
     var rowHeight: CGFloat { get }
     func cellInstance(_ tableView: UITableView, indexPath: IndexPath) -> UITableViewCell
 }
+
+protocol ExtendedMediaPost: MediaPost {
+    func convertToViewModel() -> MediaPostRepresentable
+}

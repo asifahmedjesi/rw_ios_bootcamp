@@ -22,11 +22,8 @@ class MediaPostsViewModel: MediaPostsViewModelDelegate {
         var list = [MediaPostRepresentable]()
         
         MediaPostsHandler.shared.mediaPosts.forEach { (post) in
-            if let data = post as? TextPost {
-                list.append(TextPostViewModel(post: data))
-            }
-            if let data = post as? ImagePost {
-                list.append(ImagePostViewModel(post: data))
+            if let item = post as? ExtendedMediaPost {
+                list.append(item.convertToViewModel())
             }
         }
         

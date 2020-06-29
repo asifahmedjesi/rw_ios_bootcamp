@@ -23,7 +23,7 @@ class ImagePostViewModel: MediaPostRepresentable {
         post.userName
     }
     var timestamp: String {
-        DateHandler.getString(date: post.timestamp, dateFormat: DateHandler.FormatString.DD_MMM_YYYY_HH_MM_A)
+        DateHelper.getString(date: post.timestamp, dateFormat: DateHelper.FormatString.DD_MMM_YYYY_HH_MM_A)
     }
     var image: UIImage {
         post.image
@@ -48,5 +48,12 @@ extension ImagePostViewModel {
         cell.bodytextLabel.text = self.textBody
         cell.postedOnLabel.text = self.timestamp
         cell.bodyImage.image = self.image
+    }
+}
+
+extension ImagePost: ExtendedMediaPost {
+    
+    func convertToViewModel() -> MediaPostRepresentable {
+        return ImagePostViewModel(post: self)
     }
 }
