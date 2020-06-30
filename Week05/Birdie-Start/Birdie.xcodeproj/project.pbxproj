@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		76061B4E24AA8A6700333CB2 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76061B4D24AA8A6700333CB2 /* ViewController+Extension.swift */; };
 		76061B5124AA8B2C00333CB2 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76061B5024AA8B2C00333CB2 /* DateHelper.swift */; };
 		76AE4A3724A9DB1300E845E6 /* MediaPostRepresentableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE4A3624A9DB1300E845E6 /* MediaPostRepresentableProtocol.swift */; };
 		76AE4A3924A9DB2500E845E6 /* TextPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE4A3824A9DB2500E845E6 /* TextPostViewModel.swift */; };
 		76AE4A3B24A9DB3600E845E6 /* ImagePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE4A3A24A9DB3600E845E6 /* ImagePostViewModel.swift */; };
 		76AE4A3D24A9ECF400E845E6 /* MediaPostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE4A3C24A9ECF400E845E6 /* MediaPostsViewModel.swift */; };
-		76AE4A3F24A9EE2A00E845E6 /* MediaPostsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE4A3E24A9EE2A00E845E6 /* MediaPostsViewModelProtocol.swift */; };
+		76AE4A3F24A9EE2A00E845E6 /* MediaPostsViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE4A3E24A9EE2A00E845E6 /* MediaPostsViewModelDelegate.swift */; };
 		76AE4A5024AA50EF00E845E6 /* DynamicMediaPostRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE4A4F24AA50EE00E845E6 /* DynamicMediaPostRepresentable.swift */; };
 		76AE4A5224AA511B00E845E6 /* MediaPostsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AE4A5124AA511B00E845E6 /* MediaPostsDataSource.swift */; };
 		76EA7BB024A924E300F1F073 /* TextPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EA7BAE24A924E300F1F073 /* TextPostCell.swift */; };
@@ -54,13 +53,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		76061B4D24AA8A6700333CB2 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 		76061B5024AA8B2C00333CB2 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		76AE4A3624A9DB1300E845E6 /* MediaPostRepresentableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPostRepresentableProtocol.swift; sourceTree = "<group>"; };
 		76AE4A3824A9DB2500E845E6 /* TextPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPostViewModel.swift; sourceTree = "<group>"; };
 		76AE4A3A24A9DB3600E845E6 /* ImagePostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePostViewModel.swift; sourceTree = "<group>"; };
 		76AE4A3C24A9ECF400E845E6 /* MediaPostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPostsViewModel.swift; sourceTree = "<group>"; };
-		76AE4A3E24A9EE2A00E845E6 /* MediaPostsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPostsViewModelProtocol.swift; sourceTree = "<group>"; };
+		76AE4A3E24A9EE2A00E845E6 /* MediaPostsViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPostsViewModelDelegate.swift; sourceTree = "<group>"; };
 		76AE4A4F24AA50EE00E845E6 /* DynamicMediaPostRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicMediaPostRepresentable.swift; sourceTree = "<group>"; };
 		76AE4A5124AA511B00E845E6 /* MediaPostsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPostsDataSource.swift; sourceTree = "<group>"; };
 		76EA7BAE24A924E300F1F073 /* TextPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPostCell.swift; sourceTree = "<group>"; };
@@ -222,7 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				C3C9D361249B324B001F55A6 /* ViewController.swift */,
-				76061B4D24AA8A6700333CB2 /* ViewController+Extension.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -233,10 +230,10 @@
 				76AE4A4F24AA50EE00E845E6 /* DynamicMediaPostRepresentable.swift */,
 				76AE4A3A24A9DB3600E845E6 /* ImagePostViewModel.swift */,
 				76AE4A3624A9DB1300E845E6 /* MediaPostRepresentableProtocol.swift */,
-				76AE4A3C24A9ECF400E845E6 /* MediaPostsViewModel.swift */,
-				76AE4A3E24A9EE2A00E845E6 /* MediaPostsViewModelProtocol.swift */,
-				76AE4A3824A9DB2500E845E6 /* TextPostViewModel.swift */,
 				76AE4A5124AA511B00E845E6 /* MediaPostsDataSource.swift */,
+				76AE4A3C24A9ECF400E845E6 /* MediaPostsViewModel.swift */,
+				76AE4A3E24A9EE2A00E845E6 /* MediaPostsViewModelDelegate.swift */,
+				76AE4A3824A9DB2500E845E6 /* TextPostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -382,14 +379,13 @@
 				C3C9D362249B324B001F55A6 /* ViewController.swift in Sources */,
 				76EA7BB424A924F700F1F073 /* ImagePostCell.swift in Sources */,
 				76AE4A3D24A9ECF400E845E6 /* MediaPostsViewModel.swift in Sources */,
-				76061B4E24AA8A6700333CB2 /* ViewController+Extension.swift in Sources */,
 				76EA7BB024A924E300F1F073 /* TextPostCell.swift in Sources */,
 				76EA7BB924A92CDE00F1F073 /* BaseTableViewCell.swift in Sources */,
 				76AE4A3924A9DB2500E845E6 /* TextPostViewModel.swift in Sources */,
 				76061B5124AA8B2C00333CB2 /* DateHelper.swift in Sources */,
 				C3C9D397249B346E001F55A6 /* MediaPostProtocol.swift in Sources */,
 				C3C9D39B249B3711001F55A6 /* MediaPostsHandler.swift in Sources */,
-				76AE4A3F24A9EE2A00E845E6 /* MediaPostsViewModelProtocol.swift in Sources */,
+				76AE4A3F24A9EE2A00E845E6 /* MediaPostsViewModelDelegate.swift in Sources */,
 				C3C9D368249B324B001F55A6 /* Birdie_Final.xcdatamodeld in Sources */,
 				C3C9D35E249B324B001F55A6 /* AppDelegate.swift in Sources */,
 				76AE4A3B24A9DB3600E845E6 /* ImagePostViewModel.swift in Sources */,

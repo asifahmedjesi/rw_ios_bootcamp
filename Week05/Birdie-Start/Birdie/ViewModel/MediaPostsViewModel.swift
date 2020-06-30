@@ -12,6 +12,7 @@ import UIKit
 class MediaPostsViewModel: MediaPostsViewModelDelegate {
     
     weak private var dataSource: MediaPostsDataSource?
+    weak var delegate: ViewControllerDelegate?
     
     public init(dataSource: MediaPostsDataSource) {
         self.dataSource = dataSource
@@ -34,10 +35,12 @@ class MediaPostsViewModel: MediaPostsViewModelDelegate {
     public func addPost(username: String, textbody: String) {
         let post = TextPost(textBody: textbody, userName: username, timestamp: Date())
         MediaPostsHandler.shared.addTextPost(textPost: post)
+        delegate?.result(success: true)
     }
     
     public func addPost(username: String, textbody: String, image: UIImage) {
         let post = ImagePost(textBody: textbody, userName: username, timestamp: Date(), image: image)
         MediaPostsHandler.shared.addImagePost(imagePost: post)
+        delegate?.result(success: true)
     }
 }
