@@ -22,5 +22,12 @@ class LargeViewController: UIViewController {
     }
     self.collectionView.register(LargeViewCell.nib, forCellWithReuseIdentifier: LargeViewCell.identifier)
   }
+  
+  override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+      super.traitCollectionDidChange(previousTraitCollection)
+
+      guard previousTraitCollection != nil else { return }
+      collectionView?.collectionViewLayout.invalidateLayout()
+  }
 
 }

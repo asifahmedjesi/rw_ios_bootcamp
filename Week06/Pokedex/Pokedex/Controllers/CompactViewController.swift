@@ -23,6 +23,13 @@ class CompactViewController: UIViewController {
     self.collectionView.register(CompactViewCell.nib, forCellWithReuseIdentifier: CompactViewCell.identifier)
   }
   
+  override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+      super.traitCollectionDidChange(previousTraitCollection)
+
+      guard previousTraitCollection != nil else { return }
+      collectionView?.collectionViewLayout.invalidateLayout()
+  }
+  
 }
 
 

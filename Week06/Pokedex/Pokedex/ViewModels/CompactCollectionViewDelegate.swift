@@ -13,7 +13,7 @@ class CompactCollectionViewDelegate: NSObject, UICollectionViewDelegateFlowLayou
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    let maxWidth = UIScreen.main.bounds.width
+    let maxWidth = collectionView.bounds.width
     let totalSpacing = (interItemSpacing * numberOfItemsPerRow) + interItemSpacing
     let itemWidth = (maxWidth - totalSpacing)/numberOfItemsPerRow
     

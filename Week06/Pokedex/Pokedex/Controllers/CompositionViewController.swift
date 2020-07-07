@@ -28,6 +28,13 @@ class CompositionViewController: UIViewController {
     configureDataSource()
     configureSnapshot()
   }
+  
+  override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+      super.traitCollectionDidChange(previousTraitCollection)
+
+      guard previousTraitCollection != nil else { return }
+      collectionView?.collectionViewLayout.invalidateLayout()
+  }
 
 }
 
