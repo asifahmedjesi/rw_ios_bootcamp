@@ -13,11 +13,24 @@ class LargeCollectionViewDelegate: NSObject, UICollectionViewDelegateFlowLayout 
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    let maxWidth = collectionView.bounds.width - 50
-    let totalSpacing = (interItemSpacing * numberOfItemsPerRow) + interItemSpacing
-    let itemWidth = (maxWidth - totalSpacing)/numberOfItemsPerRow
+
+    if UIApplication.shared.statusBarOrientation.isLandscape {
+      let maxWidth = collectionView.bounds.width - 150
+      let height = collectionView.bounds.height - 40
+      let totalSpacing = (interItemSpacing * numberOfItemsPerRow) + interItemSpacing
+      let itemWidth = (maxWidth - totalSpacing)/numberOfItemsPerRow
+      
+      return CGSize(width: itemWidth, height: height)
+    }
+    else {
+      let maxWidth = collectionView.bounds.width - 50
+      let height = collectionView.bounds.height - 200
+      let totalSpacing = (interItemSpacing * numberOfItemsPerRow) + interItemSpacing
+      let itemWidth = (maxWidth - totalSpacing)/numberOfItemsPerRow
+      
+      return CGSize(width: itemWidth, height: height)
+    }
     
-    return CGSize(width: itemWidth, height: 500)
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
