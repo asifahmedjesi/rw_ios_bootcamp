@@ -7,33 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73C0CE6824BCEC6A00DEDC02 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C0CE6724BCEC6A00DEDC02 /* ProfileView.swift */; };
+		763EEF0E24B7627D008FBF05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763EEF0D24B7627D008FBF05 /* ContentView.swift */; };
+		763EEF1024B763E9008FBF05 /* MediaPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763EEF0F24B763E9008FBF05 /* MediaPost.swift */; };
+		763EEF1224B76410008FBF05 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763EEF1124B76410008FBF05 /* PostViewModel.swift */; };
+		763EEF1424B773CE008FBF05 /* PostListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763EEF1324B773CE008FBF05 /* PostListRowView.swift */; };
+		763EEF1624B7743C008FBF05 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763EEF1524B7743C008FBF05 /* NewPostView.swift */; };
+		764AB80524B7976500D7CD1A /* PostListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764AB80424B7976500D7CD1A /* PostListHeaderView.swift */; };
+		764AB80924B7A8C100D7CD1A /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764AB80824B7A8C100D7CD1A /* Date+Extension.swift */; };
+		76D38BA824B7F1A2002EA5BA /* ForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D38BA724B7F1A2002EA5BA /* ForEach.swift */; };
+		76D38BAA24B7F1C6002EA5BA /* IndexedCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D38BA924B7F1C6002EA5BA /* IndexedCollection.swift */; };
+		76D38BAE24B860D9002EA5BA /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D38BAD24B860D9002EA5BA /* ImagePicker.swift */; };
+		76D38BB124B872D4002EA5BA /* AppStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D38BB024B872D4002EA5BA /* AppStyles.swift */; };
+		76D38BB324B8751D002EA5BA /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D38BB224B8751D002EA5BA /* View+Extension.swift */; };
+		76D38BB524B87B6D002EA5BA /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D38BB424B87B6D002EA5BA /* Image+Extension.swift */; };
 		CD7798B924AF0799004D6A6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7798B824AF0799004D6A6B /* AppDelegate.swift */; };
 		CD7798BB24AF0799004D6A6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7798BA24AF0799004D6A6B /* SceneDelegate.swift */; };
 		CD7798BF24AF079C004D6A6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7798BE24AF079C004D6A6B /* Assets.xcassets */; };
 		CD7798C224AF079C004D6A6B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7798C124AF079C004D6A6B /* Preview Assets.xcassets */; };
 		CD7798C524AF079C004D6A6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD7798C324AF079C004D6A6B /* LaunchScreen.storyboard */; };
-		CD7798D124AF0B23004D6A6B /* MediaPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7798CD24AF0B23004D6A6B /* MediaPost.swift */; };
-		CD7798D624B040C9004D6A6B /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7798D524B040C9004D6A6B /* NewPostView.swift */; };
-		CD7798D824B04BEC004D6A6B /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7798D724B04BEC004D6A6B /* PostListView.swift */; };
-		CD7798DA24B04C01004D6A6B /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7798D924B04C01004D6A6B /* PostView.swift */; };
-		CD7798DC24B04C1A004D6A6B /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7798DB24B04C1A004D6A6B /* PostViewModel.swift */; };
-		CD7798DE24B05896004D6A6B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7798DD24B05896004D6A6B /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CD7798B524AF0799004D6A6B /* Birdui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Birdui.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		73C0CE6724BCEC6A00DEDC02 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		763EEF0D24B7627D008FBF05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		763EEF0F24B763E9008FBF05 /* MediaPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPost.swift; sourceTree = "<group>"; };
+		763EEF1124B76410008FBF05 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		763EEF1324B773CE008FBF05 /* PostListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListRowView.swift; sourceTree = "<group>"; };
+		763EEF1524B7743C008FBF05 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
+		764AB80424B7976500D7CD1A /* PostListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListHeaderView.swift; sourceTree = "<group>"; };
+		764AB80824B7A8C100D7CD1A /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		76D38BA724B7F1A2002EA5BA /* ForEach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForEach.swift; sourceTree = "<group>"; };
+		76D38BA924B7F1C6002EA5BA /* IndexedCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexedCollection.swift; sourceTree = "<group>"; };
+		76D38BAD24B860D9002EA5BA /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		76D38BB024B872D4002EA5BA /* AppStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyles.swift; sourceTree = "<group>"; };
+		76D38BB224B8751D002EA5BA /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		76D38BB424B87B6D002EA5BA /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
+		CD7798B524AF0799004D6A6B /* BirdUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirdUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7798B824AF0799004D6A6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD7798BA24AF0799004D6A6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CD7798BE24AF079C004D6A6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD7798C124AF079C004D6A6B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CD7798C424AF079C004D6A6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD7798C624AF079C004D6A6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD7798CD24AF0B23004D6A6B /* MediaPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPost.swift; sourceTree = "<group>"; };
-		CD7798D524B040C9004D6A6B /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
-		CD7798D724B04BEC004D6A6B /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
-		CD7798D924B04C01004D6A6B /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
-		CD7798DB24B04C1A004D6A6B /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
-		CD7798DD24B05896004D6A6B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +63,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		737AAD2624BCE36500435C4C /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				76D38BB024B872D4002EA5BA /* AppStyles.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		763EEF0824B75569008FBF05 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				763EEF0F24B763E9008FBF05 /* MediaPost.swift */,
+				763EEF1124B76410008FBF05 /* PostViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		763EEF0924B75571008FBF05 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				763EEF0D24B7627D008FBF05 /* ContentView.swift */,
+				764AB80424B7976500D7CD1A /* PostListHeaderView.swift */,
+				763EEF1324B773CE008FBF05 /* PostListRowView.swift */,
+				763EEF1524B7743C008FBF05 /* NewPostView.swift */,
+				73C0CE6724BCEC6A00DEDC02 /* ProfileView.swift */,
+				76D38BAD24B860D9002EA5BA /* ImagePicker.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		763EEF0B24B75594008FBF05 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		763EEF0C24B755A1008FBF05 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				764AB80824B7A8C100D7CD1A /* Date+Extension.swift */,
+				76D38BA724B7F1A2002EA5BA /* ForEach.swift */,
+				76D38BA924B7F1C6002EA5BA /* IndexedCollection.swift */,
+				76D38BB224B8751D002EA5BA /* View+Extension.swift */,
+				76D38BB424B87B6D002EA5BA /* Image+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CD7798AC24AF0799004D6A6B = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +123,7 @@
 		CD7798B624AF0799004D6A6B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CD7798B524AF0799004D6A6B /* Birdui.app */,
+				CD7798B524AF0799004D6A6B /* BirdUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,12 +133,11 @@
 			children = (
 				CD7798B824AF0799004D6A6B /* AppDelegate.swift */,
 				CD7798BA24AF0799004D6A6B /* SceneDelegate.swift */,
-				CD7798D724B04BEC004D6A6B /* PostListView.swift */,
-				CD7798D924B04C01004D6A6B /* PostView.swift */,
-				CD7798D524B040C9004D6A6B /* NewPostView.swift */,
-				CD7798DD24B05896004D6A6B /* ImagePicker.swift */,
-				CD7798DB24B04C1A004D6A6B /* PostViewModel.swift */,
-				CD7798CD24AF0B23004D6A6B /* MediaPost.swift */,
+				763EEF0924B75571008FBF05 /* Views */,
+				737AAD2624BCE36500435C4C /* Style */,
+				763EEF0824B75569008FBF05 /* Models */,
+				763EEF0C24B755A1008FBF05 /* Extensions */,
+				763EEF0B24B75594008FBF05 /* Utilities */,
 				CD7798BE24AF079C004D6A6B /* Assets.xcassets */,
 				CD7798C324AF079C004D6A6B /* LaunchScreen.storyboard */,
 				CD7798C624AF079C004D6A6B /* Info.plist */,
@@ -107,7 +171,7 @@
 			);
 			name = Birdui;
 			productName = Birdui;
-			productReference = CD7798B524AF0799004D6A6B /* Birdui.app */;
+			productReference = CD7798B524AF0799004D6A6B /* BirdUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -161,14 +225,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76D38BAE24B860D9002EA5BA /* ImagePicker.swift in Sources */,
+				76D38BA824B7F1A2002EA5BA /* ForEach.swift in Sources */,
+				76D38BAA24B7F1C6002EA5BA /* IndexedCollection.swift in Sources */,
+				763EEF1224B76410008FBF05 /* PostViewModel.swift in Sources */,
+				763EEF1024B763E9008FBF05 /* MediaPost.swift in Sources */,
+				76D38BB524B87B6D002EA5BA /* Image+Extension.swift in Sources */,
 				CD7798B924AF0799004D6A6B /* AppDelegate.swift in Sources */,
-				CD7798D124AF0B23004D6A6B /* MediaPost.swift in Sources */,
-				CD7798DA24B04C01004D6A6B /* PostView.swift in Sources */,
+				763EEF1624B7743C008FBF05 /* NewPostView.swift in Sources */,
+				73C0CE6824BCEC6A00DEDC02 /* ProfileView.swift in Sources */,
+				763EEF0E24B7627D008FBF05 /* ContentView.swift in Sources */,
+				76D38BB124B872D4002EA5BA /* AppStyles.swift in Sources */,
+				764AB80924B7A8C100D7CD1A /* Date+Extension.swift in Sources */,
+				764AB80524B7976500D7CD1A /* PostListHeaderView.swift in Sources */,
+				763EEF1424B773CE008FBF05 /* PostListRowView.swift in Sources */,
+				76D38BB324B8751D002EA5BA /* View+Extension.swift in Sources */,
 				CD7798BB24AF0799004D6A6B /* SceneDelegate.swift in Sources */,
-				CD7798D624B040C9004D6A6B /* NewPostView.swift in Sources */,
-				CD7798DE24B05896004D6A6B /* ImagePicker.swift in Sources */,
-				CD7798DC24B04C1A004D6A6B /* PostViewModel.swift in Sources */,
-				CD7798D824B04BEC004D6A6B /* PostListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,15 +378,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Birdui/Preview Content\"";
-				DEVELOPMENT_TEAM = 35ERK77LXE;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Birdui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.Birdui;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.a4aero.Birdui;
+				PRODUCT_NAME = BirdUI;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -326,15 +398,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Birdui/Preview Content\"";
-				DEVELOPMENT_TEAM = 35ERK77LXE;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Birdui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.Birdui;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.a4aero.Birdui;
+				PRODUCT_NAME = BirdUI;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
