@@ -44,22 +44,15 @@ class AddSandwichViewController: UIViewController {
   }
   
   @IBAction func savePressed(_ sender: Any) {
-    guard let sandwichName = nameField.text,
-      !sandwichName.isEmpty else {
-        let alert = UIAlertController(title: "Missing Name",
-                                      message: "You need to enter a sandwich name!",
-                                      preferredStyle: .alert)
-        
+    guard let sandwichName = nameField.text, !sandwichName.isEmpty else {
+        let alert = UIAlertController(title: "Missing Name", message: "You need to enter a sandwich name!", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
-        
         return
     }
     
-    let newSandwich = SandwichData(name: sandwichName,
-                               sauceAmount: sauceAmount,
-                               imageName: imageName)
+    let newSandwich = SandwichData(name: sandwichName, sauceAmount: sauceAmount, imageName: imageName)
     saveSandwich(sandwich: newSandwich)
 
     dismiss(animated: true, completion: nil)
@@ -67,11 +60,10 @@ class AddSandwichViewController: UIViewController {
   
   func saveSandwich(sandwich: SandwichData) {
     guard let navController = presentingViewController as? UINavigationController,
-      let dataSource = navController.topViewController as? SandwichDataSource else {
+        let dataSource = navController.topViewController as? SandwichDataSource else {
         print("Oh noes! The datasource is missing and I don't know where to put these sandwiches!")
         fatalError()
     }
-    
     dataSource.saveSandwich(sandwich)
   }
 }
