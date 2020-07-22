@@ -20,7 +20,7 @@ If we were shipping SandwichSaturation I would prefer JSON for seeding data for 
 # SandwichSaturation - Portrait
 
 # Sandwich List View
-![Sandwich List View](Screenshots/sandwich-landscape.png)
+![Sandwich List View](Screenshots/sandwiches-portrait.png)
 
 # Sandwich Delete View
 ![Sandwich Delete View](Screenshots/delete.png)
