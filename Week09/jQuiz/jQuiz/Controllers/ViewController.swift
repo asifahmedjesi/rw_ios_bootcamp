@@ -45,10 +45,16 @@ class ViewController: UIViewController {
     
     func getClues() {
         
+        self.showSpinnerView()
+        
         Networking.shared.getRandomCategory(completion: { (categoryId) in
             guard let id = categoryId else { return }
             
             Networking.shared.getAllCluesInCategory(categoryId: id) { (questions) in
+                
+                DispatchQueue.main.async {
+                    self.hideSpinnerView()
+                }                
                 
                 if questions.count == 0 {
                     self.getClues()
