@@ -7,3 +7,30 @@
 //
 
 import Foundation
+import UIKit
+
+class QuizViewModel {
+    
+    weak private var dataSource: CluesDataSource?
+    
+    public init(dataSource: CluesDataSource) {
+        self.dataSource = dataSource
+    }
+    
+    public func fetchData() {
+        
+        var list = [ClueRepresentable]()
+        
+        /*
+        MediaPostsHandler.shared.mediaPosts.forEach { (post) in
+            if let item = post as? ExtendedMediaPost {
+                list.append(item.convertToViewModel())
+            }
+        }
+        */
+        
+        self.dataSource?.data.value = []
+        self.dataSource?.data.value = list
+    }
+
+}

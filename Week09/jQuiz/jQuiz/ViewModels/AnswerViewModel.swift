@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class AnswerViewModel {
+class ClueViewModel: ClueRepresentable {
     
     private let clue: Clue
     
@@ -19,6 +19,10 @@ class AnswerViewModel {
     
     var answer: String {
         get { clue.answer ?? "" }
+    }
+    
+    var point: Int {
+        get { clue.value ?? 0 }
     }
     
     var rowHeight: CGFloat {
@@ -33,10 +37,14 @@ class AnswerViewModel {
     }
 }
 
-extension AnswerViewModel {
-    
+extension ClueViewModel {
     public func configure(for cell: AnswerCell) {
         cell.answerLabel.text = self.answer
     }
+}
 
+extension Clue {
+    func convertToViewModel() -> ClueRepresentable {
+        return ClueViewModel(clue: self)
+    }
 }

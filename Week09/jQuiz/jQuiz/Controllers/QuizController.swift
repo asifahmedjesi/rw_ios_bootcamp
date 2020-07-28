@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class QuizController: UIViewController {
     
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var soundButton: UIButton!
@@ -18,8 +18,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     
     var clues: [Clue] = []
-    var correctAnswerClue: Clue?
+    var correctAnswerClue: ClueViewModel?
     var points: Int = 0
+    
+    let dataSource = CluesDataSource()
+
+    lazy var viewModel : QuizViewModelDelegate = {
+        let viewModel = QuizViewModel(dataSource: dataSource)
+        return viewModel
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,50 +50,50 @@ class ViewController: UIViewController {
         manageSound()
     }
     
+    
     func getClues() {
-        
         self.showSpinnerView()
-        
-        Networking.shared.getRandomCategory(completion: { (categoryId) in
-            guard let id = categoryId else { return }
-            
-            Networking.shared.getAllCluesInCategory(categoryId: id) { (questions) in
-                
-                DispatchQueue.main.async {
-                    self.hideSpinnerView()
-                }                
-                
-                if questions.count == 0 {
-                    self.getClues()
-                    return
-                }
-                
-                let correctAnswerIndex = Int.random(in: 0...3)
-                self.correctAnswerClue = questions[correctAnswerIndex]
-                self.clues = questions
-                
-                DispatchQueue.main.async {
-                    self.setUpView()
-                    print("Correct Answer Index: \(correctAnswerIndex)")
+        self.viewModel.getClues { (success) in
+            DispatchQueue.main.async {
+                self.hideSpinnerView()
+            }            
+            if success {
+                if let clue = self.viewModel.getCorrectClue() {
+                    self.correctAnswerClue = clue
+                    DispatchQueue.main.async {
+                        self.setUpView()
+                    }
                 }
             }
-
-        })
+            else {
+                self.getClues()
+            }
+        }
+        
     }
     
     func setUpTableView() {
         tableView.delegate = self
-        tableView.dataSource = self
+        tableView.dataSource = dataSource
         tableView.separatorStyle = .none
         tableView.backgroundColor = .clear
         tableView.register(AnswerCell.nib, forCellReuseIdentifier: AnswerCell.identifier)
+        
+        self.dataSource.data.addObserverAndNotify(observer: self) {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
     
     func setUpView() {
-        self.categoryLabel.text = self.correctAnswerClue?.category?.title ?? ""
-        self.clueLabel.text = self.correctAnswerClue?.question ?? ""
-        self.tableView.reloadData()
+        self.categoryLabel.text = self.correctAnswerClue?.category
+        self.clueLabel.text = self.correctAnswerClue?.question
     }
+
+}
+
+extension QuizController {
     
     func manageSound() {
         updatePlayerView()
@@ -110,42 +117,34 @@ class ViewController: UIViewController {
             soundButton.setImage(UIImage(systemName: "speaker"), for: .normal)
         }
     }
-
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return clues.count
-    }
+extension QuizController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: AnswerCell.identifier, for: indexPath) as! AnswerCell
-        cell.selectionStyle = .none
-        cell.answerLabel.text = clues[indexPath.row].answer ?? ""
-        cell.backgroundColor = .clear
-        return cell
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = clues[indexPath.row]
-        if let selectedAnswerId = item.id, let correctAnswer = correctAnswerClue, let correctAnswerId = correctAnswer.id,
+        
+        if let item = self.dataSource.data.value[indexPath.row] as? ClueViewModel,
+            let selectedAnswerId = item.clue.id,
+            let correctAnswer = correctAnswerClue,
+            let correctAnswerId = correctAnswer.clue.id,
             selectedAnswerId == correctAnswerId {
             
-            print("Value: \(correctAnswer.value ?? 0)")
-            print("Total Value (Before): \(self.points)")
-            self.points += correctAnswer.value ?? 0
-            print("Total Value (After): \(self.points)")
+            //print("Value: \(correctAnswer.point)")
+            //print("Total Value (Before): \(self.points)")
+            self.points += correctAnswer.point
+            //print("Total Value (After): \(self.points)")
             self.scoreLabel.text = "\(self.points)"
+            
             getClues()
         }
         else {
             getClues()
         }
     }
+    
 }
 

@@ -18,13 +18,16 @@
 		7626F74824CDE37F00CF8020 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7626F74624CDE37F00CF8020 /* AnswerCell.swift */; };
 		7626F74924CDE37F00CF8020 /* AnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7626F74724CDE37F00CF8020 /* AnswerCell.xib */; };
 		7626F74B24CDE47600CF8020 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7626F74A24CDE47600CF8020 /* BaseTableViewCell.swift */; };
-		76CAF1C024CEA07200AF0563 /* QuestionAnswerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CAF1BF24CEA07200AF0563 /* QuestionAnswerViewModel.swift */; };
-		76CAF1C224CEA08200AF0563 /* AnswerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CAF1C124CEA08200AF0563 /* AnswerViewModel.swift */; };
+		764B85F724CFB6A100BC3BAD /* CluesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B85F624CFB6A100BC3BAD /* CluesDataSource.swift */; };
+		764B85F924CFBA6100BC3BAD /* DynamicClueRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B85F824CFBA6100BC3BAD /* DynamicClueRepresentable.swift */; };
+		764B85FB24CFF29500BC3BAD /* ClueRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B85FA24CFF29500BC3BAD /* ClueRepresentable.swift */; };
+		76CAF1C024CEA07200AF0563 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CAF1BF24CEA07200AF0563 /* QuizViewModel.swift */; };
+		76CAF1C224CEA08200AF0563 /* ClueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CAF1C124CEA08200AF0563 /* ClueViewModel.swift */; };
 		76CAF1C424CF51B100AF0563 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CAF1C324CF51B100AF0563 /* UIImageView+Extension.swift */; };
 		76CAF1C624CF600F00AF0563 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CAF1C524CF600F00AF0563 /* UIViewController+Extension.swift */; };
 		C3DF5B7724C2549400F6D3EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DF5B7624C2549400F6D3EC /* AppDelegate.swift */; };
 		C3DF5B7924C2549400F6D3EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DF5B7824C2549400F6D3EC /* SceneDelegate.swift */; };
-		C3DF5B7B24C2549400F6D3EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DF5B7A24C2549400F6D3EC /* ViewController.swift */; };
+		C3DF5B7B24C2549400F6D3EC /* QuizController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DF5B7A24C2549400F6D3EC /* QuizController.swift */; };
 		C3DF5B8324C2549A00F6D3EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3DF5B8224C2549A00F6D3EC /* Assets.xcassets */; };
 		C3DF5BAB24C256CF00F6D3EC /* Jeopardy-theme-song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C3DF5BAA24C256CF00F6D3EC /* Jeopardy-theme-song.mp3 */; };
 		C3FBE53624C2877C00D11A30 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FBE53524C2877C00D11A30 /* SoundManager.swift */; };
@@ -59,14 +62,17 @@
 		7626F74624CDE37F00CF8020 /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
 		7626F74724CDE37F00CF8020 /* AnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerCell.xib; sourceTree = "<group>"; };
 		7626F74A24CDE47600CF8020 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
-		76CAF1BF24CEA07200AF0563 /* QuestionAnswerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswerViewModel.swift; sourceTree = "<group>"; };
-		76CAF1C124CEA08200AF0563 /* AnswerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewModel.swift; sourceTree = "<group>"; };
+		764B85F624CFB6A100BC3BAD /* CluesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CluesDataSource.swift; sourceTree = "<group>"; };
+		764B85F824CFBA6100BC3BAD /* DynamicClueRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicClueRepresentable.swift; sourceTree = "<group>"; };
+		764B85FA24CFF29500BC3BAD /* ClueRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClueRepresentable.swift; sourceTree = "<group>"; };
+		76CAF1BF24CEA07200AF0563 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
+		76CAF1C124CEA08200AF0563 /* ClueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClueViewModel.swift; sourceTree = "<group>"; };
 		76CAF1C324CF51B100AF0563 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		76CAF1C524CF600F00AF0563 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		C3DF5B7324C2549400F6D3EC /* jQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3DF5B7624C2549400F6D3EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3DF5B7824C2549400F6D3EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C3DF5B7A24C2549400F6D3EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C3DF5B7A24C2549400F6D3EC /* QuizController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizController.swift; sourceTree = "<group>"; };
 		C3DF5B8224C2549A00F6D3EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3DF5B8524C2549A00F6D3EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3DF5B8724C2549A00F6D3EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,7 +130,7 @@
 		7626F72F24CD661400CF8020 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C3DF5B7A24C2549400F6D3EC /* ViewController.swift */,
+				C3DF5B7A24C2549400F6D3EC /* QuizController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -132,8 +138,11 @@
 		7626F73024CD661B00CF8020 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				76CAF1BF24CEA07200AF0563 /* QuestionAnswerViewModel.swift */,
-				76CAF1C124CEA08200AF0563 /* AnswerViewModel.swift */,
+				764B85FA24CFF29500BC3BAD /* ClueRepresentable.swift */,
+				764B85F624CFB6A100BC3BAD /* CluesDataSource.swift */,
+				76CAF1C124CEA08200AF0563 /* ClueViewModel.swift */,
+				764B85F824CFBA6100BC3BAD /* DynamicClueRepresentable.swift */,
+				76CAF1BF24CEA07200AF0563 /* QuizViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -371,8 +380,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				76CAF1C624CF600F00AF0563 /* UIViewController+Extension.swift in Sources */,
-				76CAF1C024CEA07200AF0563 /* QuestionAnswerViewModel.swift in Sources */,
-				C3DF5B7B24C2549400F6D3EC /* ViewController.swift in Sources */,
+				76CAF1C024CEA07200AF0563 /* QuizViewModel.swift in Sources */,
+				764B85FB24CFF29500BC3BAD /* ClueRepresentable.swift in Sources */,
+				C3DF5B7B24C2549400F6D3EC /* QuizController.swift in Sources */,
+				764B85F924CFBA6100BC3BAD /* DynamicClueRepresentable.swift in Sources */,
 				C3DF5B7724C2549400F6D3EC /* AppDelegate.swift in Sources */,
 				7626F73824CD691400CF8020 /* NetworkingHandler.swift in Sources */,
 				7626F74824CDE37F00CF8020 /* AnswerCell.swift in Sources */,
@@ -383,9 +394,10 @@
 				76CAF1C424CF51B100AF0563 /* UIImageView+Extension.swift in Sources */,
 				7626F72A24CD647000CF8020 /* Category.swift in Sources */,
 				7626F73F24CD72CA00CF8020 /* ServiceType.swift in Sources */,
-				76CAF1C224CEA08200AF0563 /* AnswerViewModel.swift in Sources */,
+				76CAF1C224CEA08200AF0563 /* ClueViewModel.swift in Sources */,
 				7626F74B24CDE47600CF8020 /* BaseTableViewCell.swift in Sources */,
 				7626F74124CD745400CF8020 /* AppConstants.swift in Sources */,
+				764B85F724CFB6A100BC3BAD /* CluesDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
