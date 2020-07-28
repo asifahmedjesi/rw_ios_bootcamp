@@ -5,6 +5,6 @@ This is an iOS bootcamp organized by raywenderlich.com
 
 # jQuiz - Portrait
 
-![jQuiz](Screenshots/jQuiz.png)
+![jQuiz](Screenshots/jquiz-portrait.png)
 
 

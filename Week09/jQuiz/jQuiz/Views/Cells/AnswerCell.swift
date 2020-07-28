@@ -11,6 +11,7 @@ import UIKit
 class AnswerCell: BaseTableViewCell {
 
     @IBOutlet weak var answerLabel: UILabel!
+    @IBOutlet weak var container: UIView!
     
     static var heightForCell: CGFloat {
         UITableView.automaticDimension

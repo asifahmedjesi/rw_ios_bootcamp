@@ -47,7 +47,8 @@ class ClueViewModel: ClueRepresentable {
 
 extension ClueViewModel {
     public func configure(for cell: AnswerCell) {
-        cell.answerLabel.text = self.answer
+        cell.answerLabel.attributedText = self.answer.htmlAttributedString()
+        cell.container.layer.cornerRadius = 5
     }
 }
 

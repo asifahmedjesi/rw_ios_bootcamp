@@ -122,21 +122,18 @@ extension QuizController {
 extension QuizController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        return self.dataSource.data.value[indexPath.row].rowHeight
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if let item = self.dataSource.data.value[indexPath.row] as? ClueViewModel,
-            let selectedAnswerId = item.clue.id,
-            let correctAnswer = correctAnswerClue,
-            let correctAnswerId = correctAnswer.clue.id,
-            selectedAnswerId == correctAnswerId {
+            let selectedAnswer = item.clue.answer,
+            let correctAnswerObj = correctAnswerClue,
+            let correctAnswer = correctAnswerObj.clue.answer,
+            selectedAnswer == correctAnswer {
             
-            //print("Value: \(correctAnswer.point)")
-            //print("Total Value (Before): \(self.points)")
-            self.points += correctAnswer.point
-            //print("Total Value (After): \(self.points)")
+            self.points += correctAnswerObj.point
             self.scoreLabel.text = "\(self.points)"
             
             getClues()

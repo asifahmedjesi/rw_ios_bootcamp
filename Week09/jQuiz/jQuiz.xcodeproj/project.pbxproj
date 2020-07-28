@@ -18,6 +18,7 @@
 		7626F74824CDE37F00CF8020 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7626F74624CDE37F00CF8020 /* AnswerCell.swift */; };
 		7626F74924CDE37F00CF8020 /* AnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7626F74724CDE37F00CF8020 /* AnswerCell.xib */; };
 		7626F74B24CDE47600CF8020 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7626F74A24CDE47600CF8020 /* BaseTableViewCell.swift */; };
+		7648C9D024D083D1007EC9AF /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7648C9CF24D083D1007EC9AF /* String+Extension.swift */; };
 		764B85F724CFB6A100BC3BAD /* CluesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B85F624CFB6A100BC3BAD /* CluesDataSource.swift */; };
 		764B85F924CFBA6100BC3BAD /* DynamicClueRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B85F824CFBA6100BC3BAD /* DynamicClueRepresentable.swift */; };
 		764B85FB24CFF29500BC3BAD /* ClueRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764B85FA24CFF29500BC3BAD /* ClueRepresentable.swift */; };
@@ -62,6 +63,7 @@
 		7626F74624CDE37F00CF8020 /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
 		7626F74724CDE37F00CF8020 /* AnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerCell.xib; sourceTree = "<group>"; };
 		7626F74A24CDE47600CF8020 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		7648C9CF24D083D1007EC9AF /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		764B85F624CFB6A100BC3BAD /* CluesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CluesDataSource.swift; sourceTree = "<group>"; };
 		764B85F824CFBA6100BC3BAD /* DynamicClueRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicClueRepresentable.swift; sourceTree = "<group>"; };
 		764B85FA24CFF29500BC3BAD /* ClueRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClueRepresentable.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			children = (
 				76CAF1C324CF51B100AF0563 /* UIImageView+Extension.swift */,
 				76CAF1C524CF600F00AF0563 /* UIViewController+Extension.swift */,
+				7648C9CF24D083D1007EC9AF /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				C3DF5B7724C2549400F6D3EC /* AppDelegate.swift in Sources */,
 				7626F73824CD691400CF8020 /* NetworkingHandler.swift in Sources */,
 				7626F74824CDE37F00CF8020 /* AnswerCell.swift in Sources */,
+				7648C9D024D083D1007EC9AF /* String+Extension.swift in Sources */,
 				C3DF5B7924C2549400F6D3EC /* SceneDelegate.swift in Sources */,
 				7626F74324CD937800CF8020 /* UrlBuilder.swift in Sources */,
 				C3FBE53624C2877C00D11A30 /* SoundManager.swift in Sources */,
@@ -569,7 +573,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rw.jQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -586,7 +590,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rw.jQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
