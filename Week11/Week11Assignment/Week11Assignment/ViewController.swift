@@ -29,6 +29,7 @@ class ViewController: UIViewController {
     var startAnimation: Bool = false
     var isReload: Bool = false
     var rotationApplied: Bool = false
+    var successMessage: String = "Animation Added Successfully"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,7 +98,7 @@ class ViewController: UIViewController {
         animator.addAnimations {
             self.redBox.backgroundColor = .orange
         }
-        self.showSuccessAlert()
+        self.showSuccessAlert(msg: self.successMessage)
     }
     
     @IBAction func buttonRightPressed(_ sender: Any) {
@@ -107,7 +108,7 @@ class ViewController: UIViewController {
             let x = self.redBox.center.x + (self.view.frame.size.width - (self.redBox.frame.size.width + 32))
             self.redBox.center = CGPoint(x: x, y: y)
         }
-        self.showSuccessAlert()
+        self.showSuccessAlert(msg: self.successMessage)
     }
     
     @IBAction func buttonTopPressed(_ sender: Any) {
@@ -116,90 +117,7 @@ class ViewController: UIViewController {
             self.redBox.transform = self.rotationApplied ? .identity : CGAffineTransform(rotationAngle: CGFloat.pi)
             self.rotationApplied = !self.rotationApplied
         }
-        self.showSuccessAlert()
+        self.showSuccessAlert(msg: self.successMessage)
     }
-}
-
-extension ViewController {
-    
-    func showSuccessAlert() {
-        
-        let alertView = UIView()
-        alertView.translatesAutoresizingMaskIntoConstraints = false
-        alertView.layer.cornerRadius = 5
-        alertView.backgroundColor = .black
-        alertView.alpha = 0.8
-        view.addSubview(alertView)
-        
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "tick")
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        alertView.addSubview(imageView)
-        
-        let labelView = UILabel()
-        labelView.numberOfLines = 0
-        labelView.textColor = .white
-        labelView.text = "Animation Added Successfully"
-        labelView.translatesAutoresizingMaskIntoConstraints = false
-        alertView.addSubview(labelView)
-        
-        NSLayoutConstraint.activate([
-            imageView.leadingAnchor.constraint(equalTo: alertView.leadingAnchor, constant: 8),
-            imageView.centerYAnchor.constraint(equalTo: alertView.centerYAnchor),
-            imageView.widthAnchor.constraint(equalToConstant: 35),
-            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor),
-            
-            labelView.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 8),
-            labelView.trailingAnchor.constraint(equalTo: alertView.trailingAnchor, constant: -8),
-            labelView.centerYAnchor.constraint(equalTo: alertView.centerYAnchor)
-        ])
-        
-        
-        let containerView = UIView(frame: alertView.frame)
-        view.addSubview(containerView)
-        containerView.addSubview(alertView)
-        containerView.translatesAutoresizingMaskIntoConstraints = false
-        
-        let topConstraint = containerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: alertView.frame.height * -1)
-        let widthConstraint = containerView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8, constant: 0)
-        
-        NSLayoutConstraint.activate([
-            topConstraint,
-            widthConstraint,
-            containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            containerView.heightAnchor.constraint(equalToConstant: 50),
-            
-            alertView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
-            alertView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
-            alertView.widthAnchor.constraint(equalTo: containerView.widthAnchor),
-            alertView.heightAnchor.constraint(equalTo: containerView.heightAnchor)
-        ])
-        
-        view.layoutIfNeeded()
-
-        UIView.animate(
-            withDuration: 0.8, delay: 0,
-            usingSpringWithDamping: 0.6, initialSpringVelocity: 10,
-            animations: {
-                topConstraint.constant = alertView.frame.height
-                self.view.layoutIfNeeded()
-            }
-        )
-        
-        delay(seconds: 2) {
-            UIView.transition(
-                with: containerView,
-                duration: 0.8,
-                options: .transitionCrossDissolve,
-                animations: alertView.removeFromSuperview,
-                completion: { _ in containerView.removeFromSuperview() }
-            )
-        }
-        
-    }
-}
-
-private func delay(seconds: TimeInterval, execute: @escaping () -> Void) {
-    DispatchQueue.main.asyncAfter(deadline: .now() + seconds, execute: execute)
 }
 
