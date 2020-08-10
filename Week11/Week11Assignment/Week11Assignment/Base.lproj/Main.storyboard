@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Week11Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLg-Wz-jCf">
+                                <rect key="frame" x="177" y="254" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gLg-Wz-jCf" secondAttribute="height" multiplier="1:1" id="God-Bh-nYs"/>
+                                    <constraint firstAttribute="width" constant="60" id="jD9-gb-any"/>
+                                </constraints>
+                                <state key="normal" image="rotate_button" backgroundImage="rotate_button"/>
+                                <state key="selected" image="rotate_button" backgroundImage="rotate_button"/>
+                                <state key="highlighted" image="rotate_button" backgroundImage="rotate_button"/>
+                                <connections>
+                                    <action selector="buttonTopPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SEI-JL-OEL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMm-V8-Me1">
+                                <rect key="frame" x="267" y="344" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WMm-V8-Me1" secondAttribute="height" multiplier="1:1" id="Gfo-9T-QnR"/>
+                                    <constraint firstAttribute="width" constant="60" id="jgv-bq-LQS"/>
+                                </constraints>
+                                <state key="normal" image="move_button" backgroundImage="move_button"/>
+                                <state key="selected" image="move_button" backgroundImage="move_button"/>
+                                <state key="highlighted" image="move_button" backgroundImage="move_button"/>
+                                <connections>
+                                    <action selector="buttonRightPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oDU-pi-z5U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSj-Lk-WLt">
+                                <rect key="frame" x="87" y="344" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="ldE-CW-Im0"/>
+                                    <constraint firstAttribute="width" secondItem="gSj-Lk-WLt" secondAttribute="height" multiplier="1:1" id="rNQ-mr-6bc"/>
+                                </constraints>
+                                <state key="normal" image="background_button" backgroundImage="background_button"/>
+                                <state key="selected" image="background_button" backgroundImage="background_button"/>
+                                <state key="highlighted" image="background_button" backgroundImage="background_button"/>
+                                <connections>
+                                    <action selector="buttonLeftPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oYR-Xj-Fv7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rT-lt-igt">
+                                <rect key="frame" x="177" y="344" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="FhP-VK-C72"/>
+                                    <constraint firstAttribute="width" secondItem="1rT-lt-igt" secondAttribute="height" multiplier="1:1" id="jKW-S4-Vq2"/>
+                                </constraints>
+                                <state key="normal" image="play_button" backgroundImage="play_button"/>
+                                <state key="selected" image="play_button" backgroundImage="play_button"/>
+                                <state key="highlighted" image="play_button" backgroundImage="play_button"/>
+                                <connections>
+                                    <action selector="buttonPlayPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bdW-Lb-1Au"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1rT-lt-igt" firstAttribute="top" secondItem="gLg-Wz-jCf" secondAttribute="bottom" constant="30" id="A8q-zk-bjL"/>
+                            <constraint firstItem="1rT-lt-igt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="HXk-6s-Kny"/>
+                            <constraint firstItem="1rT-lt-igt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IGR-df-VdB"/>
+                            <constraint firstItem="gLg-Wz-jCf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RiE-Rs-jT1"/>
+                            <constraint firstItem="gSj-Lk-WLt" firstAttribute="centerY" secondItem="1rT-lt-igt" secondAttribute="centerY" id="gzc-SN-meA"/>
+                            <constraint firstItem="WMm-V8-Me1" firstAttribute="leading" secondItem="1rT-lt-igt" secondAttribute="trailing" constant="30" id="h2Y-yS-aWq"/>
+                            <constraint firstItem="1rT-lt-igt" firstAttribute="leading" secondItem="gSj-Lk-WLt" secondAttribute="trailing" constant="30" id="sRs-Gr-sov"/>
+                            <constraint firstItem="WMm-V8-Me1" firstAttribute="centerY" secondItem="1rT-lt-igt" secondAttribute="centerY" id="zEZ-po-YhD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonLeft" destination="gSj-Lk-WLt" id="k6d-ww-D1B"/>
+                        <outlet property="buttonPlay" destination="1rT-lt-igt" id="zTf-ym-eC8"/>
+                        <outlet property="buttonRight" destination="WMm-V8-Me1" id="vBt-xd-XBq"/>
+                        <outlet property="buttonTop" destination="gLg-Wz-jCf" id="x1k-gR-DVB"/>
+                        <outlet property="constraintButtonLeftTrailingSpace" destination="sRs-Gr-sov" id="1tb-DR-LC6"/>
+                        <outlet property="constraintButtonRightLeadingSpace" destination="h2Y-yS-aWq" id="Sx4-wx-Dg0"/>
+                        <outlet property="constraintButtonTopBottomSpace" destination="A8q-zk-bjL" id="0Ir-pC-cN5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-672" y="63"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background_button" width="103" height="102"/>
+        <image name="move_button" width="102" height="102"/>
+        <image name="play_button" width="1024" height="1024"/>
+        <image name="rotate_button" width="102" height="103"/>
+    </resources>
+</document>
