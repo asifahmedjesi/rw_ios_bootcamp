@@ -67,6 +67,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		769C1DB024EB2535006AA62F /* BaseViews */ = {
+			isa = PBXGroup;
+			children = (
+				769C1DAA24EB16DB006AA62F /* BaseTableHeaderFooterView.swift */,
+				76CE6B0224EA9BEF0045BFEE /* BaseTableViewCell.swift */,
+			);
+			path = BaseViews;
+			sourceTree = "<group>";
+		};
 		76CE6ABE24E90CAA0045BFEE = {
 			isa = PBXGroup;
 			children = (
@@ -114,8 +123,7 @@
 		76CE6ADF24E90F500045BFEE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				769C1DAA24EB16DB006AA62F /* BaseTableHeaderFooterView.swift */,
-				76CE6B0224EA9BEF0045BFEE /* BaseTableViewCell.swift */,
+				769C1DB024EB2535006AA62F /* BaseViews */,
 				76CE6B0024EA9B6A0045BFEE /* CountryStatisticsCell.swift */,
 				769C1DA824EB104E006AA62F /* CountryStatisticsSectionHeader.swift */,
 				76CE6AE924E91B1A0045BFEE /* CSTotalDataView.swift */,
