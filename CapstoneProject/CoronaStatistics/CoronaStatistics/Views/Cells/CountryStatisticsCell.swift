@@ -10,8 +10,8 @@ import UIKit
 
 class CountryStatisticsCell: BaseTableViewCell {
 
-    let countryLabel: PaddingLabel = {
-        let label = PaddingLabel()
+    let countryLabel: CSPaddingLabel = {
+        let label = CSPaddingLabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .darkGray
         label.font = .systemFont(ofSize: 14)
@@ -19,8 +19,8 @@ class CountryStatisticsCell: BaseTableViewCell {
         return label
     }()
 
-    let confirmedLabel: PaddingLabel = {
-        let label = PaddingLabel()
+    let confirmedLabel: CSPaddingLabel = {
+        let label = CSPaddingLabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .darkGray
         label.font = .systemFont(ofSize: 14)
@@ -29,8 +29,8 @@ class CountryStatisticsCell: BaseTableViewCell {
         return label
     }()
 
-    let deathLabel: PaddingLabel = {
-        let label = PaddingLabel()
+    let deathLabel: CSPaddingLabel = {
+        let label = CSPaddingLabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .red
         label.font = .systemFont(ofSize: 14)
@@ -39,10 +39,10 @@ class CountryStatisticsCell: BaseTableViewCell {
         return label
     }()
 
-    let recoveredLabel: PaddingLabel = {
-        let label = PaddingLabel()
+    let recoveredLabel: CSPaddingLabel = {
+        let label = CSPaddingLabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .green
+        label.textColor = UIColor(red: 121/255, green: 198/255, blue: 99/255, alpha: 1)
         label.font = .systemFont(ofSize: 14)
         label.textAlignment = .right
         label.padding(top: 0, bottom: 0, left: 0, right: 12)

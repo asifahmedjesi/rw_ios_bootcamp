@@ -11,12 +11,12 @@ import UIKit
 // MARK:- Configure UI
 class StatisticsListVC: UIViewController {
 
-    let totalConfirmedView: CSTotalStatisticsView = CSTotalStatisticsView()
-    let totalCriticalView: CSTotalStatisticsView = CSTotalStatisticsView()
-    let totalDeathView: CSTotalStatisticsView = CSTotalStatisticsView()
-    let totalDeathPercentageView: CSTotalStatisticsView = CSTotalStatisticsView()
-    let totalRecoveredView: CSTotalStatisticsView = CSTotalStatisticsView()
-    let totalRecoveredPercentageView: CSTotalStatisticsView = CSTotalStatisticsView()
+    let totalConfirmedView: TotalStatisticsView = TotalStatisticsView()
+    let totalCriticalView: TotalStatisticsView = TotalStatisticsView()
+    let totalDeathView: TotalStatisticsView = TotalStatisticsView()
+    let totalDeathPercentageView: TotalStatisticsView = TotalStatisticsView()
+    let totalRecoveredView: TotalStatisticsView = TotalStatisticsView()
+    let totalRecoveredPercentageView: TotalStatisticsView = TotalStatisticsView()
 
     let tableView: UITableView = UITableView()
 
@@ -62,7 +62,7 @@ class StatisticsListVC: UIViewController {
         view.addSubview(tableView)
     }
 
-    func setTitles(statisticsView: CSTotalStatisticsView, title: String, subtitle: String) {
+    func setTitles(statisticsView: TotalStatisticsView, title: String, subtitle: String) {
         statisticsView.title = title
         statisticsView.subtitle = subtitle
     }
@@ -89,6 +89,11 @@ extension StatisticsListVC: UITableViewDelegate {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 0.000001))
         view.backgroundColor = .clear
         return view
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = StatisticsDetailsVC()
+        vc.item = items[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -128,16 +133,14 @@ extension StatisticsListVC {
         setupRecoveredPercentageViewConstraints()
         setupTableViewConstraints()
     }
-    
     func setupConfirmedViewConstraints() {
         var constraints = [NSLayoutConstraint]()
         constraints.append(totalConfirmedView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30))
         constraints.append(totalConfirmedView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16))
         constraints.append(totalConfirmedView.widthAnchor.constraint(equalTo: totalCriticalView.widthAnchor))
-        constraints.append(totalConfirmedView.heightAnchor.constraint(equalToConstant: CSTotalStatisticsView.height))
+        constraints.append(totalConfirmedView.heightAnchor.constraint(equalToConstant: TotalStatisticsView.height))
         NSLayoutConstraint.activate(constraints)
     }
-    
     func setupCriticalViewConstraints() {
         var constraints = [NSLayoutConstraint]()
         constraints.append(totalCriticalView.topAnchor.constraint(equalTo: totalConfirmedView.topAnchor))
@@ -146,7 +149,6 @@ extension StatisticsListVC {
         constraints.append(totalCriticalView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16))
         NSLayoutConstraint.activate(constraints)
     }
-    
     func setupDeathViewConstraints() {
         var constraints = [NSLayoutConstraint]()
         constraints.append(totalDeathView.topAnchor.constraint(equalTo: totalConfirmedView.bottomAnchor, constant: 16))
@@ -156,7 +158,6 @@ extension StatisticsListVC {
         constraints.append(totalDeathView.widthAnchor.constraint(equalTo: totalConfirmedView.widthAnchor))
         NSLayoutConstraint.activate(constraints)
     }
-    
     func setupDeathPercentageViewConstraints() {
         var constraints = [NSLayoutConstraint]()
         constraints.append(totalDeathPercentageView.topAnchor.constraint(equalTo: totalDeathView.topAnchor))
@@ -166,7 +167,6 @@ extension StatisticsListVC {
         constraints.append(totalDeathPercentageView.widthAnchor.constraint(equalTo: totalCriticalView.widthAnchor))
         NSLayoutConstraint.activate(constraints)
     }
-    
     func setupRecoveredViewConstraints() {
         var constraints = [NSLayoutConstraint]()
         constraints.append(totalRecoveredView.topAnchor.constraint(equalTo: totalDeathView.bottomAnchor, constant: 16))
@@ -176,7 +176,6 @@ extension StatisticsListVC {
         constraints.append(totalRecoveredView.widthAnchor.constraint(equalTo: totalDeathView.widthAnchor))
         NSLayoutConstraint.activate(constraints)
     }
-    
     func setupRecoveredPercentageViewConstraints() {
         var constraints = [NSLayoutConstraint]()
         constraints.append(totalRecoveredPercentageView.topAnchor.constraint(equalTo: totalRecoveredView.topAnchor))
@@ -186,7 +185,6 @@ extension StatisticsListVC {
         constraints.append(totalRecoveredPercentageView.widthAnchor.constraint(equalTo: totalDeathPercentageView.widthAnchor))
         NSLayoutConstraint.activate(constraints)
     }
-    
     func setupTableViewConstraints() {
         var constraints = [NSLayoutConstraint]()
         constraints.append(tableView.topAnchor.constraint(equalTo: totalRecoveredView.bottomAnchor, constant: 12))

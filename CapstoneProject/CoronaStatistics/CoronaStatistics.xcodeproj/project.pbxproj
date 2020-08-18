@@ -7,16 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		769C1DA924EB104E006AA62F /* CountryStatisticsSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769C1DA824EB104E006AA62F /* CountryStatisticsSectionHeader.swift */; };
 		769C1DAB24EB16DB006AA62F /* BaseTableHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769C1DAA24EB16DB006AA62F /* BaseTableHeaderFooterView.swift */; };
-		769C1DAF24EB212A006AA62F /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769C1DAE24EB212A006AA62F /* PaddingLabel.swift */; };
+		769F866824EBB2C3000B2DE6 /* CountryStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F866724EBB2C3000B2DE6 /* CountryStatisticsView.swift */; };
+		769F866C24EBC64D000B2DE6 /* CSDetailsTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F866B24EBC64D000B2DE6 /* CSDetailsTitleLabel.swift */; };
+		769F866E24EBC792000B2DE6 /* CSDetailsValueLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F866D24EBC792000B2DE6 /* CSDetailsValueLabel.swift */; };
+		769F867124EC0A94000B2DE6 /* CSPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F867024EC0A94000B2DE6 /* CSPaddingLabel.swift */; };
+		769F867424EC0B10000B2DE6 /* CountryStatisticsSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F867324EC0B10000B2DE6 /* CountryStatisticsSectionHeader.swift */; };
 		76CE6ACB24E90CAA0045BFEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CE6ACA24E90CAA0045BFEE /* AppDelegate.swift */; };
 		76CE6ACD24E90CAA0045BFEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CE6ACC24E90CAA0045BFEE /* SceneDelegate.swift */; };
 		76CE6AD424E90CAB0045BFEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76CE6AD324E90CAB0045BFEE /* Assets.xcassets */; };
 		76CE6AD724E90CAB0045BFEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76CE6AD524E90CAB0045BFEE /* LaunchScreen.storyboard */; };
 		76CE6AE324E910F50045BFEE /* StatisticsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CE6AE224E910F50045BFEE /* StatisticsListVC.swift */; };
 		76CE6AE824E911FE0045BFEE /* StatisticsDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CE6AE724E911FE0045BFEE /* StatisticsDetailsVC.swift */; };
-		76CE6AEA24E91B1A0045BFEE /* CSTotalDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CE6AE924E91B1A0045BFEE /* CSTotalDataView.swift */; };
+		76CE6AEA24E91B1A0045BFEE /* TotalStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CE6AE924E91B1A0045BFEE /* TotalStatisticsView.swift */; };
 		76CE6AEE24E95FFB0045BFEE /* ServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CE6AED24E95FFB0045BFEE /* ServiceType.swift */; };
 		76CE6AF024E960330045BFEE /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CE6AEF24E960330045BFEE /* AppConstants.swift */; };
 		76CE6AF424E969E90045BFEE /* TotalStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CE6AF324E969E90045BFEE /* TotalStatistics.swift */; };
@@ -31,9 +34,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		769C1DA824EB104E006AA62F /* CountryStatisticsSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryStatisticsSectionHeader.swift; sourceTree = "<group>"; };
 		769C1DAA24EB16DB006AA62F /* BaseTableHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableHeaderFooterView.swift; sourceTree = "<group>"; };
-		769C1DAE24EB212A006AA62F /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		769F866724EBB2C3000B2DE6 /* CountryStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryStatisticsView.swift; sourceTree = "<group>"; };
+		769F866B24EBC64D000B2DE6 /* CSDetailsTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSDetailsTitleLabel.swift; sourceTree = "<group>"; };
+		769F866D24EBC792000B2DE6 /* CSDetailsValueLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSDetailsValueLabel.swift; sourceTree = "<group>"; };
+		769F867024EC0A94000B2DE6 /* CSPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSPaddingLabel.swift; sourceTree = "<group>"; };
+		769F867324EC0B10000B2DE6 /* CountryStatisticsSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryStatisticsSectionHeader.swift; sourceTree = "<group>"; };
 		76CE6AC724E90CAA0045BFEE /* CoronaStatistics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoronaStatistics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76CE6ACA24E90CAA0045BFEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76CE6ACC24E90CAA0045BFEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,7 +48,7 @@
 		76CE6AD824E90CAB0045BFEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76CE6AE224E910F50045BFEE /* StatisticsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsListVC.swift; sourceTree = "<group>"; };
 		76CE6AE724E911FE0045BFEE /* StatisticsDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsDetailsVC.swift; sourceTree = "<group>"; };
-		76CE6AE924E91B1A0045BFEE /* CSTotalDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSTotalDataView.swift; sourceTree = "<group>"; };
+		76CE6AE924E91B1A0045BFEE /* TotalStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalStatisticsView.swift; sourceTree = "<group>"; };
 		76CE6AED24E95FFB0045BFEE /* ServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceType.swift; sourceTree = "<group>"; };
 		76CE6AEF24E960330045BFEE /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		76CE6AF324E969E90045BFEE /* TotalStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalStatistics.swift; sourceTree = "<group>"; };
@@ -74,6 +80,25 @@
 				76CE6B0224EA9BEF0045BFEE /* BaseTableViewCell.swift */,
 			);
 			path = BaseViews;
+			sourceTree = "<group>";
+		};
+		769F866F24EBD0E1000B2DE6 /* CSControls */ = {
+			isa = PBXGroup;
+			children = (
+				769F866B24EBC64D000B2DE6 /* CSDetailsTitleLabel.swift */,
+				769F866D24EBC792000B2DE6 /* CSDetailsValueLabel.swift */,
+				769F867024EC0A94000B2DE6 /* CSPaddingLabel.swift */,
+			);
+			path = CSControls;
+			sourceTree = "<group>";
+		};
+		769F867224EC0AD5000B2DE6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				76CE6B0024EA9B6A0045BFEE /* CountryStatisticsCell.swift */,
+				769F867324EC0B10000B2DE6 /* CountryStatisticsSectionHeader.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		76CE6ABE24E90CAA0045BFEE = {
@@ -123,11 +148,11 @@
 		76CE6ADF24E90F500045BFEE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				769F866724EBB2C3000B2DE6 /* CountryStatisticsView.swift */,
+				76CE6AE924E91B1A0045BFEE /* TotalStatisticsView.swift */,
 				769C1DB024EB2535006AA62F /* BaseViews */,
-				76CE6B0024EA9B6A0045BFEE /* CountryStatisticsCell.swift */,
-				769C1DA824EB104E006AA62F /* CountryStatisticsSectionHeader.swift */,
-				76CE6AE924E91B1A0045BFEE /* CSTotalDataView.swift */,
-				769C1DAE24EB212A006AA62F /* PaddingLabel.swift */,
+				769F867224EC0AD5000B2DE6 /* Cells */,
+				769F866F24EBD0E1000B2DE6 /* CSControls */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -248,21 +273,24 @@
 			files = (
 				76CE6AF824E96CCD0045BFEE /* NetworkService.swift in Sources */,
 				76CE6AFF24EA97190045BFEE /* UIViewController+Extension.swift in Sources */,
+				769F867424EC0B10000B2DE6 /* CountryStatisticsSectionHeader.swift in Sources */,
 				76CE6B0524EA9D870045BFEE /* Number+Extension.swift in Sources */,
 				76CE6AFB24E97F540045BFEE /* URLRequest+Extension.swift in Sources */,
 				76CE6AE324E910F50045BFEE /* StatisticsListVC.swift in Sources */,
 				76CE6ACB24E90CAA0045BFEE /* AppDelegate.swift in Sources */,
 				76CE6B0124EA9B6A0045BFEE /* CountryStatisticsCell.swift in Sources */,
-				769C1DAF24EB212A006AA62F /* PaddingLabel.swift in Sources */,
+				769F866C24EBC64D000B2DE6 /* CSDetailsTitleLabel.swift in Sources */,
+				769F866824EBB2C3000B2DE6 /* CountryStatisticsView.swift in Sources */,
 				76CE6AE824E911FE0045BFEE /* StatisticsDetailsVC.swift in Sources */,
 				76CE6ACD24E90CAA0045BFEE /* SceneDelegate.swift in Sources */,
 				76CE6AF024E960330045BFEE /* AppConstants.swift in Sources */,
 				76CE6AF624E96A160045BFEE /* CountryStatistics.swift in Sources */,
 				76CE6AFD24E97FB00045BFEE /* URL+Extension.swift in Sources */,
-				76CE6AEA24E91B1A0045BFEE /* CSTotalDataView.swift in Sources */,
+				76CE6AEA24E91B1A0045BFEE /* TotalStatisticsView.swift in Sources */,
+				769F867124EC0A94000B2DE6 /* CSPaddingLabel.swift in Sources */,
 				769C1DAB24EB16DB006AA62F /* BaseTableHeaderFooterView.swift in Sources */,
+				769F866E24EBC792000B2DE6 /* CSDetailsValueLabel.swift in Sources */,
 				76CE6AEE24E95FFB0045BFEE /* ServiceType.swift in Sources */,
-				769C1DA924EB104E006AA62F /* CountryStatisticsSectionHeader.swift in Sources */,
 				76CE6B0324EA9BEF0045BFEE /* BaseTableViewCell.swift in Sources */,
 				76CE6AF424E969E90045BFEE /* TotalStatistics.swift in Sources */,
 			);

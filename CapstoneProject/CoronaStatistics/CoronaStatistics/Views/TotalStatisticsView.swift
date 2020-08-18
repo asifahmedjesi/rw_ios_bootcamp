@@ -8,13 +8,27 @@
 
 import UIKit
 
-class CSTotalStatisticsView: UIView {
+class TotalStatisticsView: UIView {
 
     static let height: CGFloat = 55
-    
-    private var titleLabel: UILabel = UILabel()
-    private var subtitleLabel: UILabel = UILabel()
-    
+
+    private var titleLabel: UILabel = {
+        var label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .darkGray
+        label.textAlignment = .center
+        label.font = .systemFont(ofSize: 17, weight: .semibold)
+        return label
+    }()
+    private var subtitleLabel: UILabel = {
+        var label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .black
+        label.textAlignment = .center
+        label.font = .systemFont(ofSize: 13)
+        return label
+    }()
+
     var title: String = "" {
         didSet {
             titleLabel.text = title
@@ -25,7 +39,7 @@ class CSTotalStatisticsView: UIView {
             subtitleLabel.text = subtitle
         }
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -49,26 +63,11 @@ class CSTotalStatisticsView: UIView {
         layer.shadowOpacity = 1
         layer.shadowOffset = .zero
         layer.shadowRadius = 6
-        
-        configureTitleLabel()
-        configureSubtitleLabel()
-        
-        setupConstraints()
-    }
-    
-    func configureTitleLabel() {
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.textColor = .darkGray
-        titleLabel.textAlignment = .center
-        titleLabel.font = .systemFont(ofSize: 17, weight: .semibold)
+
         addSubview(titleLabel)
-    }
-    func configureSubtitleLabel() {
-        subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        subtitleLabel.textColor = .black
-        subtitleLabel.textAlignment = .center
-        subtitleLabel.font = .systemFont(ofSize: 13)
         addSubview(subtitleLabel)
+
+        setupConstraints()
     }
     
     func setupConstraints() {

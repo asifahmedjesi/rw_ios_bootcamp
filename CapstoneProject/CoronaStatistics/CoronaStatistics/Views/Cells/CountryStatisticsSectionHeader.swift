@@ -8,12 +8,10 @@
 
 import UIKit
 
-
-
 class CountryStatisticsSectionHeader: BaseTableHeaderFooterView {
     
-    let countryLabel: PaddingLabel = {
-        let label = PaddingLabel()
+    let countryLabel: CSPaddingLabel = {
+        let label = CSPaddingLabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
         label.font = .systemFont(ofSize: 14)
@@ -22,8 +20,8 @@ class CountryStatisticsSectionHeader: BaseTableHeaderFooterView {
         return label
     }()
 
-    let confirmedLabel: PaddingLabel = {
-        let label = PaddingLabel()
+    let confirmedLabel: CSPaddingLabel = {
+        let label = CSPaddingLabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
         label.font = .systemFont(ofSize: 14)
@@ -33,8 +31,8 @@ class CountryStatisticsSectionHeader: BaseTableHeaderFooterView {
         return label
     }()
 
-    let deathLabel: PaddingLabel = {
-        let label = PaddingLabel()
+    let deathLabel: CSPaddingLabel = {
+        let label = CSPaddingLabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
         label.font = .systemFont(ofSize: 14)
@@ -44,8 +42,8 @@ class CountryStatisticsSectionHeader: BaseTableHeaderFooterView {
         return label
     }()
 
-    let recoveredLabel: PaddingLabel = {
-        let label = PaddingLabel()
+    let recoveredLabel: CSPaddingLabel = {
+        let label = CSPaddingLabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
         label.font = .systemFont(ofSize: 14)
