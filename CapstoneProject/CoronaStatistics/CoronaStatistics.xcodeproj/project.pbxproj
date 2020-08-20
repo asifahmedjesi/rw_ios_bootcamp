@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7672E05F24EE6B9A00F44A0F /* CountryStatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7672E05924EE6B9A00F44A0F /* CountryStatisticsViewModel.swift */; };
+		7672E06024EE6B9A00F44A0F /* TotalStatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7672E05A24EE6B9A00F44A0F /* TotalStatisticsViewModel.swift */; };
+		7672E06124EE6B9A00F44A0F /* DynamicCountryStatisticsRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7672E05B24EE6B9A00F44A0F /* DynamicCountryStatisticsRepresentable.swift */; };
+		7672E06224EE6B9A00F44A0F /* StatisticsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7672E05C24EE6B9A00F44A0F /* StatisticsListViewModel.swift */; };
+		7672E06324EE6B9A00F44A0F /* CountryStatisticsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7672E05D24EE6B9A00F44A0F /* CountryStatisticsDataSource.swift */; };
+		7672E06424EE6B9A00F44A0F /* CountryStatisticsRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7672E05E24EE6B9A00F44A0F /* CountryStatisticsRepresentable.swift */; };
 		769C1DAB24EB16DB006AA62F /* BaseTableHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769C1DAA24EB16DB006AA62F /* BaseTableHeaderFooterView.swift */; };
 		769F866824EBB2C3000B2DE6 /* CountryStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F866724EBB2C3000B2DE6 /* CountryStatisticsView.swift */; };
 		769F866C24EBC64D000B2DE6 /* CSDetailsTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F866B24EBC64D000B2DE6 /* CSDetailsTitleLabel.swift */; };
@@ -34,6 +40,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7672E05924EE6B9A00F44A0F /* CountryStatisticsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryStatisticsViewModel.swift; sourceTree = "<group>"; };
+		7672E05A24EE6B9A00F44A0F /* TotalStatisticsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalStatisticsViewModel.swift; sourceTree = "<group>"; };
+		7672E05B24EE6B9A00F44A0F /* DynamicCountryStatisticsRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicCountryStatisticsRepresentable.swift; sourceTree = "<group>"; };
+		7672E05C24EE6B9A00F44A0F /* StatisticsListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsListViewModel.swift; sourceTree = "<group>"; };
+		7672E05D24EE6B9A00F44A0F /* CountryStatisticsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryStatisticsDataSource.swift; sourceTree = "<group>"; };
+		7672E05E24EE6B9A00F44A0F /* CountryStatisticsRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryStatisticsRepresentable.swift; sourceTree = "<group>"; };
 		769C1DAA24EB16DB006AA62F /* BaseTableHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableHeaderFooterView.swift; sourceTree = "<group>"; };
 		769F866724EBB2C3000B2DE6 /* CountryStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryStatisticsView.swift; sourceTree = "<group>"; };
 		769F866B24EBC64D000B2DE6 /* CSDetailsTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSDetailsTitleLabel.swift; sourceTree = "<group>"; };
@@ -169,6 +181,12 @@
 		76CE6AE124E90F5F0045BFEE /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				7672E05D24EE6B9A00F44A0F /* CountryStatisticsDataSource.swift */,
+				7672E05E24EE6B9A00F44A0F /* CountryStatisticsRepresentable.swift */,
+				7672E05924EE6B9A00F44A0F /* CountryStatisticsViewModel.swift */,
+				7672E05B24EE6B9A00F44A0F /* DynamicCountryStatisticsRepresentable.swift */,
+				7672E05C24EE6B9A00F44A0F /* StatisticsListViewModel.swift */,
+				7672E05A24EE6B9A00F44A0F /* TotalStatisticsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -272,10 +290,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				76CE6AF824E96CCD0045BFEE /* NetworkService.swift in Sources */,
+				7672E06224EE6B9A00F44A0F /* StatisticsListViewModel.swift in Sources */,
 				76CE6AFF24EA97190045BFEE /* UIViewController+Extension.swift in Sources */,
 				769F867424EC0B10000B2DE6 /* CountryStatisticsSectionHeader.swift in Sources */,
 				76CE6B0524EA9D870045BFEE /* Number+Extension.swift in Sources */,
+				7672E06024EE6B9A00F44A0F /* TotalStatisticsViewModel.swift in Sources */,
 				76CE6AFB24E97F540045BFEE /* URLRequest+Extension.swift in Sources */,
+				7672E06124EE6B9A00F44A0F /* DynamicCountryStatisticsRepresentable.swift in Sources */,
 				76CE6AE324E910F50045BFEE /* StatisticsListVC.swift in Sources */,
 				76CE6ACB24E90CAA0045BFEE /* AppDelegate.swift in Sources */,
 				76CE6B0124EA9B6A0045BFEE /* CountryStatisticsCell.swift in Sources */,
@@ -284,7 +305,9 @@
 				76CE6AE824E911FE0045BFEE /* StatisticsDetailsVC.swift in Sources */,
 				76CE6ACD24E90CAA0045BFEE /* SceneDelegate.swift in Sources */,
 				76CE6AF024E960330045BFEE /* AppConstants.swift in Sources */,
+				7672E06324EE6B9A00F44A0F /* CountryStatisticsDataSource.swift in Sources */,
 				76CE6AF624E96A160045BFEE /* CountryStatistics.swift in Sources */,
+				7672E06424EE6B9A00F44A0F /* CountryStatisticsRepresentable.swift in Sources */,
 				76CE6AFD24E97FB00045BFEE /* URL+Extension.swift in Sources */,
 				76CE6AEA24E91B1A0045BFEE /* TotalStatisticsView.swift in Sources */,
 				769F867124EC0A94000B2DE6 /* CSPaddingLabel.swift in Sources */,
@@ -293,6 +316,7 @@
 				76CE6AEE24E95FFB0045BFEE /* ServiceType.swift in Sources */,
 				76CE6B0324EA9BEF0045BFEE /* BaseTableViewCell.swift in Sources */,
 				76CE6AF424E969E90045BFEE /* TotalStatistics.swift in Sources */,
+				7672E05F24EE6B9A00F44A0F /* CountryStatisticsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

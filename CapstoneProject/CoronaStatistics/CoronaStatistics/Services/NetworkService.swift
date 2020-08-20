@@ -73,10 +73,12 @@ class NetworkService {
             }
             
             let decoder = JSONDecoder()
-            guard let list = try? decoder.decode([CountryStatistics].self, from: data) else {
+            guard var list = try? decoder.decode([CountryStatistics].self, from: data) else {
                 completion([])
                 return
             }
+            
+            list.sort { $0.confirmed > $1.confirmed }
             
             completion(list)
             

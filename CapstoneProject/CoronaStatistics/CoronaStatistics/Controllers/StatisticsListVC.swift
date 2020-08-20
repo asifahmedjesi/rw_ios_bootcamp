@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol StatisticsListViewModelDelegate: class {
+    func fetchTotalStatistics(completionHandler: @escaping (_ stats: TotalStatistics?) -> Void)
+    func fetchCountryStatistics(completionHandler: @escaping () -> Void)
+}
+
 // MARK:- Configure UI
 class StatisticsListVC: UIViewController {
 
@@ -20,9 +25,15 @@ class StatisticsListVC: UIViewController {
 
     let tableView: UITableView = UITableView()
 
+    let dataSource = CountryStatisticsDataSource()
+
+    lazy var viewModel : StatisticsListViewModel = {
+        let viewModel = StatisticsListViewModel(dataSource: dataSource)
+        return viewModel
+    }()
+
     var items: [CountryStatistics] = [CountryStatistics]()
-    var totalStatistics: TotalStatistics?
-    
+
     var totalStatisticsLoaded = false
     var countryStatisticsLoaded = false
 
@@ -30,9 +41,45 @@ class StatisticsListVC: UIViewController {
         super.viewDidLoad()
 
         configureUI()
+
+        self.dataSource.data.addObserverAndNotify(observer: self) { [weak self] in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
         
-        loadTotalSatistics()
-        loadCountrySatistics()
+        self.totalStatisticsLoaded = false
+        self.countryStatisticsLoaded = false
+        self.showSpinnerView()
+        
+        self.viewModel.fetchTotalStatistics { (stats) in
+            self.totalStatisticsLoaded = true
+            DispatchQueue.main.async {
+                if self.totalStatisticsLoaded && self.countryStatisticsLoaded {
+                    self.hideSpinnerView()
+                }
+            }
+            guard let item = stats else { return }
+            
+            DispatchQueue.main.async {
+                self.setTitles(statisticsView: self.totalConfirmedView, title: item.confirmed.withCommas(), subtitle: "Confirmed")
+                self.setTitles(statisticsView: self.totalCriticalView, title: item.critical.withCommas(), subtitle: "Critical")
+                self.setTitles(statisticsView: self.totalDeathView, title: item.deaths.withCommas(), subtitle: "Death")
+                self.setTitles(statisticsView: self.totalDeathPercentageView, title: item.fatalityRate.withCommasAndMin2Digit(), subtitle: "Death %")
+                self.setTitles(statisticsView: self.totalRecoveredView, title: item.confirmed.description, subtitle: "Recovered")
+                self.setTitles(statisticsView: self.totalRecoveredPercentageView, title: item.recoveredRate.withCommasAndMin2Digit(), subtitle: "Recovered %")
+            }
+        }
+        
+        self.viewModel.fetchCountryStatistics {
+            self.countryStatisticsLoaded = true
+            DispatchQueue.main.async {
+                if self.totalStatisticsLoaded && self.countryStatisticsLoaded {
+                    self.hideSpinnerView()
+                }
+            }
+        }
+        
     }
 
     func configureUI() {
@@ -46,13 +93,12 @@ class StatisticsListVC: UIViewController {
         view.addSubview(totalRecoveredPercentageView)
         
         configureTableView()
-        
         setupViewConstraints()
     }
     func configureTableView() {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
-        tableView.dataSource = self
+        tableView.dataSource = dataSource
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
         
@@ -91,33 +137,11 @@ extension StatisticsListVC: UITableViewDelegate {
         return view
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = StatisticsDetailsVC()
-        vc.item = items[indexPath.row]
-        navigationController?.pushViewController(vc, animated: true)
-    }
-}
-
-// MARK:- TableView Data Source
-extension StatisticsListVC: UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item = items[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: CountryStatisticsCell.identifier, for: indexPath) as! CountryStatisticsCell
-        
-        cell.countryLabel.text = item.country
-        cell.confirmedLabel.text = item.confirmed.withCommas()
-        cell.deathLabel.text = item.deaths.withCommas()
-        cell.recoveredLabel.text = item.recovered.withCommas()
-        
-        cell.selectionStyle = .none
-        
-        return cell
+        if let item = self.dataSource.data.value[indexPath.row] as? CountryStatisticsViewModel {
+            let vc = StatisticsDetailsVC()
+            vc.item = item
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 
@@ -193,52 +217,4 @@ extension StatisticsListVC {
         constraints.append(tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor))
         NSLayoutConstraint.activate(constraints)
     }
-}
-
-// MARK:- API Services
-extension StatisticsListVC {
-    
-    func loadTotalSatistics() {
-        self.totalStatisticsLoaded = false
-        self.showSpinnerView()
-        NetworkService.shared.getTotalStatistics { (data) in
-            self.totalStatisticsLoaded = true
-            DispatchQueue.main.async {
-                if self.totalStatisticsLoaded && self.countryStatisticsLoaded {
-                    self.hideSpinnerView()
-                }
-            }
-            self.totalStatistics = data
-            guard let item = data else { return }
-            
-            DispatchQueue.main.async {
-                self.setTitles(statisticsView: self.totalConfirmedView, title: item.confirmed.withCommas(), subtitle: "Confirmed")
-                self.setTitles(statisticsView: self.totalCriticalView, title: item.critical.withCommas(), subtitle: "Critical")
-                self.setTitles(statisticsView: self.totalDeathView, title: item.deaths.withCommas(), subtitle: "Death")
-                self.setTitles(statisticsView: self.totalDeathPercentageView, title: item.fatalityRate.withCommasAndMin2Digit(), subtitle: "Death %")
-                self.setTitles(statisticsView: self.totalRecoveredView, title: item.confirmed.description, subtitle: "Recovered")
-                self.setTitles(statisticsView: self.totalRecoveredPercentageView, title: item.recoveredRate.withCommasAndMin2Digit(), subtitle: "Recovered %")
-            }
-        }
-    }
-    func loadCountrySatistics() {
-        self.countryStatisticsLoaded = false
-        self.showSpinnerView()
-        NetworkService.shared.getAllCountryStatistics { (list) in
-            self.countryStatisticsLoaded = true
-            DispatchQueue.main.async {
-                if self.totalStatisticsLoaded && self.countryStatisticsLoaded {
-                    self.hideSpinnerView()
-                }
-            }
-            
-            self.items = list
-            self.items.sort { $0.confirmed > $1.confirmed }
-            
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
-    }
-    
 }

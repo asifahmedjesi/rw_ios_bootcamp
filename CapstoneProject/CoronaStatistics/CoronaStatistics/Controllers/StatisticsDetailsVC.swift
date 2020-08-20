@@ -12,7 +12,7 @@ class StatisticsDetailsVC: UIViewController {
 
     let countryStatisticsDetails: CountryStatisticsView = CountryStatisticsView()
 
-    var item: CountryStatistics!
+    var item: CountryStatisticsViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
